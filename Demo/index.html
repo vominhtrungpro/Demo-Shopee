@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;subset=vietnamese">
+    <link rel="stylesheet" href="/css/demo.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="/js/demo.js"></script>
+
+
+    <title>Index</title>
+</head>
+<body class="portal">
+    <div id="app">
+        <div class="wrapper">
+            <header class="main-header">
+                <div class="container-header">
+                    <div class="container">
+                        <div class="header-content navbar row  justify-content-between align-items-center">
+                            <div class="logo-now col-auto">
+                                <span>
+                                    <a href="/index.html">
+                                        <img src="/asset/shopeefoodvn.png" alt="ShopeeFood">
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="select-local col-auto">
+                                <div class="dropdown">
+                                    <div onclick="myFunction()" class="dropdown-toggle" role="button" id="local-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">TP. HCM</div>
+                                    <div id="myDropdown" class="dropdown-menu">
+                                        <div class="dropdown-item"><span class="name col">TP. HCM</span><span class="count col-auto">84319 địa điểm</span></div> 
+                                        <div class="dropdown-item"><span class="name col">Hà Nội</span><span class="count col-auto">40998 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Đà Nẵng</span><span class="count col-auto">11579 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Cần Thơ</span><span class="count col-auto">3496 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Hải Phòng</span><span class="count col-auto">4058 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Huế</span><span class="count col-auto">2778 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Khánh Hoà</span><span class="count col-auto">2354 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Đồng Nai</span><span class="count col-auto">4215 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Nghệ An</span><span class="count col-auto">1657 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Vũng Tàu</span><span class="count col-auto">1871 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Bắc Ninh</span><span class="count col-auto">564 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Bình Dương</span><span class="count col-auto">3185 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Điện Biên</span><span class="count col-auto">10448 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Lâm Đồng</span><span class="count col-auto">1444 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Quảng Nam</span><span class="count col-auto">1003 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Quảng Ninh</span><span class="count col-auto">891 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Thái Nguyên</span><span class="count col-auto">1017 địa điểm</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-nav col">
+                                <a class="nav-item active" href="/">Đồ ăn</a>
+                                <a class="nav-item " href="">Thực phẩm</a>
+                                <a class="nav-item " href="">Bia</a>
+                                <a class="nav-item " href="">Hoa</a>
+                                <a class="nav-item " href="">Siêu thị</a>
+                                <a class="nav-item " href="">Thuốc</a>
+                                <a class="nav-item " href="">Thú cưng</a>
+                            </div>
+                            <div class="header-icon-search col-auto">
+                                <span data-toggle="modal" data-target="#modal-search">
+                                    <span id="myBtn" class="icon icon-search-dark"></span>
+                                </span>
+                            </div>
+                            <div class="language dropdown col-auto">
+                                <div onclick="myFunction2()" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="icon icon-lag-vn">   
+                                    </span>
+                                </div>
+                                <div id="myDropdown2" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <div class="dropdown-item"><span class="icon icon-lag-en"></span><span class="language-item">Tiếng Anh</span></div>
+                                    <div class="dropdown-item"><span class="icon icon-lag-vn"></span><span class="language-item">Tiếng Việt</span></div>
+                                </div>
+                            </div>
+                            <div class="user-acc col-auto">
+                                <a href="/login.html"><button type="button" class="btn btn-none-bg btn-login">Đăng nhập</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="modal fade modal-search show" id="modal-search" tabindex="-1" role="dialog" style="display: none; padding-right: 16px;">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <span class="close" data-dismiss="modal">x</span>
+                            <div class="modal-search-form">
+                                <span class="sub-title">Đặt Đồ ăn, giao hàng từ 20'... có 70014 địa điểm ở TP. HCM từ 00:00 - 23:59</span>
+                                <form>
+                                    <input class="search-input" name="search-input" type="text" autocomplete="off" value="">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="myP"  class="now-banner ver_vi" style="position: fixed; top: 70px;">
+                <div class="container">
+                    <div class="now-search">
+                        <div>
+                            <h1 class="title">Đặt Đồ ăn, giao hàng từ 20'...</h1>
+                            <div class="local">có 69863 địa điểm ở TP. HCM từ 00:00 - 23:59</div>
+                        </div>
+                        <div class="form-search">
+                            <div class="input-group">
+                                <input type="text" id="txtSearchHome" placeholder="Tìm địa điểm, món ăn, địa chỉ..." value="">
+                                <a href="">
+                                    <button type="button" class="btn btn-search">
+                                        <span class="icon icon-search"></span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="category-list-filter">
+                            <a href="/search.html"><span class="category-item ">All</span></a>
+                            <a href=""><span class="category-item ">Đồ ăn</span></a>
+                            <a href=""><span class="category-item ">Đồ uống</span></a>
+                            <a href=""><span class="category-item ">Đồ chay</span></a>
+                            <a href=""><span class="category-item ">Bánh kem</span></a>
+                            <a href=""><span class="category-item ">Tráng miệng</span></a>
+                            <a href=""><span class="category-item ">Homemade</span></a>
+                            <a href=""><span class="category-item ">Vỉa hè</span></a>
+                            <a href=""><span class="category-item ">Pizza/Burger</span></a>
+                            <a href=""><span class="category-item ">Món gà</span></a>
+                            <a href=""><span class="category-item ">Món lẩu</span></a>
+                            <a href=""><span class="category-item ">Sushi</span></a>
+                            <a href=""><span class="category-item ">Mì phở</span></a>
+                            <a href=""><span class="category-item ">Cơm hộp</span></a>
+                        </div>
+                        <div>
+                            <div class="font18 mb-2 mt-3">Sử dụng App ShopeeFood để có nhiều giảm giá <br>và trải nghiệm tốt hơn</div>
+                            <a target="_blank" href="" title="App Store">
+                                <span class="icon icon-app-store-big"></span>
+                            </a>
+                            <a target="_blank" href="" title="Google Play">
+                                <span class="icon icon-gg-play-big"></span>
+                            </a>
+                        </div>
+                    </div>                
+                </div>
+                <br>
+            </div>
+            <div class="contain-main-home clearfix">
+                <div class="container">
+                    <div class="main-right-home">
+                        <div class="user-get-local">
+                            <div class="row align-items-center no-gutters pointer">
+                                <div class="col-auto">
+                                    <span class="txt-blue txt-bold">Đồ ăn</span>
+                                    <i class="fas fa-long-arrow-alt-right txt-gray-7 ml-2 font12"></i>
+                                </div>
+                                <div class="col pl-2 pr-2 txt-elipsis">Chọn địa chỉ giao hàng</div>
+                            </div>
+                        </div>
+                        <div class="now-list-restaurant deal-tab">
+                            <div class="title-wrapper">
+                                <h2 class="title">Ưu đãi</h2>
+                                <a class="view-all-deal" href="">
+                                    <span class="icon-list-deal">
+                                        <span class="square"></span>
+                                        <span class="square"></span>
+                                        <span class="square"></span>
+                                        <span class="square"></span>
+                                    </span>
+                                    "Xem tất cả"
+                                </a>
+                            </div>
+                            <div class="list-restaurant">
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" href="/detail.html">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/res/g103/1020115/prof/s280x175/foody-upload-api-foody-mobile-hmzz-200421103141.jpg" class="">
+                                        </div>
+                                        <div class="info-restaurant">
+                                            <div class="info-basic-res">
+                                                <h4 class="name-res" title="Bún Bò Đất Thánh - Shop Online">Bún Bò Đất Thánh - Shop Online</h4>
+                                                <div class="address-res" title="221/16 Đất Thánh, P. 6, Tân Bình, TP. HCM">221/16 Đất Thánh, P. 6, Tân Bình, TP. HCM</div>
+                                            </div>
+                                            <p class="content-promotion">
+                                                <i class="fas fa-tag"></i>
+                                                Giảm món
+                                            </p>
+                                        </div>
+                                    </a>    
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/res/g103/1024417/prof/s280x175/foody-upload-api-foody-mobile-hmzz-200520100244.jpg" class="">
+                                        </div>
+                                        <div class="info-restaurant">
+                                            <div class="info-basic-res">
+                                                <h4 class="name-res" title="Bếp Bà Muối - Ăn Vặt Online">Bếp Bà Muối - Ăn Vặt Online</h4>
+                                                <div class="address-res" title="606/52 Đường 3 Tháng 2, P. 14, Quận 10, TP. HCM">606/52 Đường 3 Tháng 2, P. 14, Quận 10, TP. HCM</div>
+                                            </div>
+                                            <p class="content-promotion">
+                                                <i class="fas fa-tag"></i>
+                                                Giảm món
+                                            </p>
+                                        </div>
+                                    </a>    
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/res/g88/873165/prof/s280x175/foody-upload-api-foody-mobile-21-jpg-181229121709.jpg" class="">
+                                        </div>
+                                        <div class="info-restaurant">
+                                            <div class="info-basic-res">
+                                                <h4 class="name-res" title="Anh Quán - Mì Khô Gà Quay &amp; Hủ Tiếu Mì Sủi Cảo">Anh Quán - Mì Khô Gà Quay &amp; Hủ Tiếu Mì Sủi Cảo</h4>
+                                                <div class="address-res" title="80/17/138 Dương Quảng Hàm, P. 5, Gò Vấp, TP. HCM">80/17/138 Dương Quảng Hàm, P. 5, Gò Vấp, TP. HCM</div>
+                                            </div>
+                                            <p class="content-promotion">
+                                                <i class="fas fa-tag"></i>
+                                                Giảm món
+                                            </p>
+                                        </div>
+                                    </a>    
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/res/g94/935188/prof/s280x175/foody-upload-api-foody-mobile-17b-200626115140.jpg" class="">
+                                        </div>
+                                        <div class="info-restaurant">
+                                            <div class="info-basic-res">
+                                                <h4 class="name-res" title="Royaltea Vietnam By Hongkong - Sơn Kỳ">Royaltea Vietnam By Hongkong - Sơn Kỳ</h4>
+                                                <div class="address-res" title="35 Sơn Kỳ, P. Sơn Kỳ, Tân Phú, TP. HCM">35 Sơn Kỳ, P. Sơn Kỳ, Tân Phú, TP. HCM</div>
+                                            </div>
+                                            <p class="content-promotion">
+                                                <i class="fas fa-tag"></i>
+                                                Giảm món
+                                            </p>
+                                        </div>
+                                    </a>    
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/res/g69/682861/prof/s280x175/foody-upload-api-foody-mobile-foody-upload-api-foo-191009094438.jpg" class="">
+                                        </div>
+                                        <div class="info-restaurant">
+                                            <div class="info-basic-res">
+                                                <h4 class="name-res" title="TocoToco Bubble Tea - Thủ Đức 95 Dân Chủ">TocoToco Bubble Tea - Thủ Đức 95 Dân Chủ</h4>
+                                                <div class="address-res" title="95 Dân Chủ, P. Bình Thọ, Thủ Đức, TP. HCM">95 Dân Chủ, P. Bình Thọ, Thủ Đức, TP. HCM</div>
+                                            </div>
+                                            <p class="content-promotion">
+                                                <i class="fas fa-tag"></i>
+                                                Giảm món
+                                            </p>
+                                        </div>
+                                    </a>    
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/res/g66/656870/prof/s280x175/foody-mobile-12-jpg.jpg" class="">
+                                        </div>
+                                        <div class="info-restaurant">
+                                            <div class="info-basic-res">
+                                                <h4 class="name-res" title="Uncle Tea - Trà Đài Loan - Lão Tử">Uncle Tea - Trà Đài Loan - Lão Tử</h4>
+                                                <div class="address-res" title="21/31 Lão Tử, P. 11, Quận 5, TP. HCM">21/31 Lão Tử, P. 11, Quận 5, TP. HCM</div>
+                                            </div>
+                                            <p class="content-promotion">
+                                                <i class="fas fa-tag"></i>
+                                                Giảm món
+                                            </p>
+                                        </div>
+                                    </a>    
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/res/g96/950008/prof/s280x175/foody-upload-api-foody-mobile-foody-upload-api-foo-190822151330.jpg" class="">
+                                        </div>
+                                        <div class="info-restaurant">
+                                            <div class="info-basic-res">
+                                                <h4 class="name-res" title="TocoToco Bubble Tea - Phổ Quang">TocoToco Bubble Tea - Phổ Quang</h4>
+                                                <div class="address-res" title="28 Phổ Quang, P. 2, Tân Bình, TP. HCM">28 Phổ Quang, P. 2, Tân Bình, TP. HCM</div>
+                                            </div>
+                                            <p class="content-promotion">
+                                                <i class="fas fa-tag"></i>
+                                                Giảm món
+                                            </p>
+                                        </div>
+                                    </a>    
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/res/g94/934386/prof/s280x175/foody-upload-api-foody-mobile-hma-190628160729.jpg" class="">
+                                        </div>
+                                        <div class="info-restaurant">
+                                            <div class="info-basic-res">
+                                                <h4 class="name-res" title="Anh Thư - Bánh Mì &amp; Bún Thịt Nướng">Anh Thư - Bánh Mì &amp; Bún Thịt Nướng</h4>
+                                                <div class="address-res" title="115B Tôn Đản, P. 14, Quận 4, TP. HCM">115B Tôn Đản, P. 14, Quận 4, TP. HCM</div>
+                                            </div>
+                                            <p class="content-promotion">
+                                                <i class="fas fa-tag"></i>
+                                                Giảm món
+                                            </p>
+                                        </div>
+                                    </a>    
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/res/g2/10234/prof/s280x175/foody-upload-api-foody-mobile-im-7fa8f506-220309130710.jpg" class="">
+                                        </div>
+                                        <div class="info-restaurant">
+                                            <div class="info-basic-res">
+                                                <h4 class="name-res" title="Sủi Cảo Ngọc Ý - Hà Tôn Quyền">Sủi Cảo Ngọc Ý - Hà Tôn Quyền</h4>
+                                                <div class="address-res" title="187 Hà Tôn Quyền, P. 4, Quận 11, TP. HCM">187 Hà Tôn Quyền, P. 4, Quận 11, TP. HCM</div>
+                                            </div>
+                                            <p class="content-promotion">
+                                                <i class="fas fa-tag"></i>
+                                                Giảm món
+                                            </p>
+                                        </div>
+                                    </a>    
+                                </div>
+                            </div>
+                            <div class="txt-center mt-2">
+                                <button class="btn-none btn-load-more link">
+                                    <span class="pr-1">Xem thêm</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="now-list-restaurant collection collection-tab">
+                            <div class="title-wrapper">
+                                <h2 class="title">Bộ sưu tập</h2>
+                                <a class="view-all-deal" href="">
+                                    <span class="icon-list-deal">
+                                        <span class="square"></span>
+                                        <span class="square"></span>
+                                        <span class="square"></span>
+                                        <span class="square"></span>
+                                    </span>
+                                    "Xem tất cả"
+                                </a>
+                            </div>
+                            <div class="list-restaurant">
+                                <div>
+                                    <div class="item-restaurant">
+                                        <a target="_blank" class="item-content" title="Vui tiệc thả ga, tặng mã giảm 77k" href="">
+                                            <div class="img-restaurant">
+                                                <img src="https://images.foody.vn/delivery/collection/s320x200/image-2ece7376-220628175035.jpeg">
+                                            </div>
+                                            <div class="info-restaurant info-basic-res">
+                                                <h4 class="name-res" title="Vui tiệc thả ga, tặng mã giảm 77k">Vui tiệc thả ga, tặng mã giảm 77k</h4>
+                                                <div class="txt-blue font12">200 địa điểm</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-restaurant">
+                                        <a target="_blank" class="item-content" title="Vạn món ngon, chốt deal 50%" href="">
+                                            <div class="img-restaurant">
+                                                <img src="https://images.foody.vn/delivery/collection/s320x200/image-f952ac53-220628175516.jpeg">
+                                            </div>
+                                            <div class="info-restaurant info-basic-res">
+                                                <h4 class="name-res" title="Vạn món ngon, chốt deal 50%">Vạn món ngon, chốt deal 50%</h4>
+                                                <div class="txt-blue font12">200 địa điểm</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-restaurant">
+                                        <a target="_blank" class="item-content" title="X9 Freship, giảm đến 35K" href="">
+                                            <div class="img-restaurant">
+                                                <img src="https://images.foody.vn/delivery/collection/s320x200/image-2ece7376-220628175035.jpeg">
+                                            </div>
+                                            <div class="info-restaurant info-basic-res">
+                                                <h4 class="name-res" title="X9 Freship, giảm đến 35K">X9 Freship, giảm đến 35K</h4>
+                                                <div class="txt-blue font12">200 địa điểm</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-restaurant">
+                                        <a target="_blank" class="item-content" title="Siêu tiệc 7k, ngàn món ngon" href="">
+                                            <div class="img-restaurant">
+                                                <img src="https://images.foody.vn/delivery/collection/s320x200/image-14cba4eb-220628174422.jpeg">
+                                            </div>
+                                            <div class="info-restaurant info-basic-res">
+                                                <h4 class="name-res" title="Siêu tiệc 7k, ngàn món ngon">Siêu tiệc 7k, ngàn món ngon</h4>
+                                                <div class="txt-blue font12">200 địa điểm</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-restaurant">
+                                        <a target="_blank" class="item-content" title="Combo 77k, ăn cả thế giới" href="">
+                                            <div class="img-restaurant">
+                                                <img src="https://images.foody.vn/delivery/collection/s320x200/image-d2d6773b-220628174620.jpeg">
+                                            </div>
+                                            <div class="info-restaurant info-basic-res">
+                                                <h4 class="name-res" title="Combo 77k, ăn cả thế giới">Combo 77k, ăn cả thế giới</h4>
+                                                <div class="txt-blue font12">200 địa điểm</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-restaurant">
+                                        <a target="_blank" class="item-content" title="Thứ 4 - Siêu tiệc giảm 50%" href="">
+                                            <div class="img-restaurant">
+                                                <img src="https://images.foody.vn/delivery/collection/s320x200/image-2ece7376-220628175035.jpeg">
+                                            </div>
+                                            <div class="info-restaurant info-basic-res">
+                                                <h4 class="name-res" title="Thứ 4 - Siêu tiệc giảm 50%">Thứ 4 - Siêu tiệc giảm 50%</h4>
+                                                <div class="txt-blue font12">200 địa điểm</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-restaurant">
+                                        <a target="_blank" class="item-content" title="Deal to bao no, giảm đến 40K" href="">
+                                            <div class="img-restaurant">
+                                                <img src="https://images.foody.vn/delivery/collection/s320x200/image-cdf3f5e8-220506000949.jpeg">
+                                            </div>
+                                            <div class="info-restaurant info-basic-res">
+                                                <h4 class="name-res" title="Deal to bao no, giảm đến 40K">Deal to bao no, giảm đến 40K</h4>
+                                                <div class="txt-blue font12">200 địa điểm</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-restaurant">
+                                        <a target="_blank" class="item-content" title="Thế giới ăn vặt chỉ 0Đ" href="">
+                                            <div class="img-restaurant">
+                                                <img src="https://images.foody.vn/delivery/collection/s320x200/image-a6b6ebcc-211129212832.jpeg">
+                                            </div>
+                                            <div class="info-restaurant info-basic-res">
+                                                <h4 class="name-res" title="Thế giới ăn vặt chỉ 0Đ">Thế giới ăn vặt chỉ 0Đ</h4>
+                                                <div class="txt-blue font12">200 địa điểm</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item-restaurant">
+                                        <a target="_blank" class="item-content" title="Quán mới lên sàn deal 0Đ" href="">
+                                            <div class="img-restaurant">
+                                                <img src="https://images.foody.vn/delivery/collection/s320x200/image-2ece7376-220628175035.jpeg">
+                                            </div>
+                                            <div class="info-restaurant info-basic-res">
+                                                <h4 class="name-res" title="Quán mới lên sàn deal 0Đ">Quán mới lên sàn deal 0Đ</h4>
+                                                <div class="txt-blue font12">200 địa điểm</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="now-list-restaurant now-list-restaurant-row home-tab">
+                            <div class="header-tab row align-items-center">
+                                <div class="col">
+                                    <button class="item-tab active">Gần tôi</button>
+                                    <button class="item-tab">Bán chạy</button>
+                                    <button class="item-tab">Đánh giá</button>
+                                    <button class="item-tab">Giao nhanh</button>
+                                </div>
+                                <div class="col-auto">
+                                    <select name="districtId">
+                                        <option value="-1">Chọn quận/ huyện</option>
+                                        <option value="1">Quận 1</option>
+                                        <option value="2">Quận 2</option>
+                                        <option value="3">Quận 3</option>
+                                        <option value="4">Quận 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="list-restaurant">
+                                <div class="item-restaurant">
+                                    <a class="item-content" href="">
+                                        <div class="row no-gutters">
+                                            <div class="col-auto">
+                                                <div class="img-restaurant">
+                                                    <img src="https://images.foody.vn/res/g4/38121/prof/s280x175/foody-mobile-w487r6a0-jpg-439-635858718115795391.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="info-restaurant">
+                                                    <div class="name-res">
+                                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                                        Cơm Chiên &amp; Nui Xào Bò - Cống Quỳnh
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="address-res mb-1">102/12 Cống Quỳnh, Quận 1, TP. HCM</div>
+                                                        </div>
+                                                        <div class="col_auto">
+                                                            <div class="item-res-distant"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-res-info">
+                                                        <span class="icon icon-price-tag"></span>
+                                                        "Tối thiểu 20k"
+                                                        <span class="icon icon-money-sm ml-3"></span>
+                                                        "Giá 36k"
+                                                    </div>
+                                                    <p class="kind-restaurant"> Quán ăn</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a class="item-content" href="">
+                                        <div class="row no-gutters">
+                                            <div class="col-auto">
+                                                <div class="img-restaurant">
+                                                    <img src="https://images.foody.vn/res/g95/946255/prof/s280x175/foody-upload-api-foody-mobile-trai-cay-hop-190925115917.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="info-restaurant">
+                                                    <div class="name-res">
+                                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                                        Yumi Fruit - Trái Cây Sạch & Đồ Ăn Vặt
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="address-res mb-1">10 địa điểm</div>
+                                                        </div>
+                                                        <div class="col_auto">
+                                                            <div class="item-res-distant"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-res-info">
+                                                        <span class="icon icon-price-tag"></span>
+                                                        "Tối thiểu 20k"
+                                                        <span class="icon icon-money-sm ml-3"></span>
+                                                        "Giá 62k"
+                                                    </div>
+                                                    <p class="content-promotion pt-1 pl-0 pb-0">
+                                                        <i class="fas fa-tag"></i>
+                                                        "DEAL 7k"
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a class="item-content" href="">
+                                        <div class="row no-gutters">
+                                            <div class="col-auto">
+                                                <div class="img-restaurant">
+                                                    <img src="https://images.foody.vn/res/g106/1052587/prof/s280x175/foody-upload-api-foody-mobile-11-201026094530.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="info-restaurant">
+                                                    <div class="name-res">
+                                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                                        Sumi - Ăn Vặt Cá Viên - Shop Online
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="address-res mb-1">148/12/25 Tôn Đản, P. 8, Quận 4, TP. HCM</div>
+                                                        </div>
+                                                        <div class="col_auto">
+                                                            <div class="item-res-distant"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-res-info">
+                                                        <span class="icon icon-price-tag"></span>
+                                                        "Tối thiểu 20k"
+                                                        <span class="icon icon-money-sm ml-3"></span>
+                                                        "Giá 36k"
+                                                    </div>
+                                                    <p class="content-promotion pt-1 pl-0 pb-0">
+                                                        <i class="fas fa-tag"></i>
+                                                        "Giảm món"
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a class="item-content" href="">
+                                        <div class="row no-gutters">
+                                            <div class="col-auto">
+                                                <div class="img-restaurant">
+                                                    <img src="https://images.foody.vn/res/g9/86991/prof/s280x175/foody-mobile-banh-trang-tron-nguyen-xuan-khoat-tp-hcm-140721100650.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="info-restaurant">
+                                                    <div class="name-res">
+                                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                                        Bánh Tráng Trộn - Nguyễn Xuân Khoát
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="address-res mb-1">111 Nguyễn Xuân Khoát, P. Tân Thành, Tân Phú, TP. HCM</div>
+                                                        </div>
+                                                        <div class="col_auto">
+                                                            <div class="item-res-distant"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-res-info">
+                                                        <span class="icon icon-price-tag"></span>
+                                                        "Tối thiểu 20k"
+                                                        <span class="icon icon-money-sm ml-3"></span>
+                                                        "Giá 28k"
+                                                    </div>
+                                                    <p class="content-promotion pt-1 pl-0 pb-0"><i class="fas fa-tag"></i> Giảm món</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a class="item-content" href="">
+                                        <div class="row no-gutters">
+                                            <div class="col-auto">
+                                                <div class="img-restaurant">
+                                                    <img src="https://images.foody.vn/res/g105/1041127/prof/s280x175/foody-upload-api-foody-mobile-11-200828113535.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="info-restaurant">
+                                                    <div class="name-res">
+                                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                                        Cơm Tấm Mây
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="address-res mb-1">3 địa điểm</div>
+                                                        </div>
+                                                        <div class="col_auto">
+                                                            <div class="item-res-distant"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-res-info">
+                                                        <span class="icon icon-price-tag"></span>
+                                                        "Tối thiểu 20k"
+                                                        <span class="icon icon-money-sm ml-3"></span>
+                                                        "Giá 41k"
+                                                    </div>
+                                                    <p class="content-promotion pt-1 pl-0 pb-0"><i class="fas fa-tag"></i> DEAL 7K</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a class="item-content" href="">
+                                        <div class="row no-gutters">
+                                            <div class="col-auto">
+                                                <div class="img-restaurant">
+                                                    <img src="https://images.foody.vn/res/g98/974720/prof/s280x175/image-c7989e11-211027112035.jpeg">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="info-restaurant">
+                                                    <div class="name-res">
+                                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                                        3 Râu - Thức Ăn Nhanh
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="address-res mb-1">20 địa điểm</div>
+                                                        </div>
+                                                        <div class="col_auto">
+                                                            <div class="item-res-distant"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-res-info">
+                                                        <span class="icon icon-price-tag"></span>
+                                                        "Tối thiểu 20k"
+                                                        <span class="icon icon-money-sm ml-3"></span>
+                                                        "Giá 61k"
+                                                    </div>
+                                                    <p class="content-promotion pt-1 pl-0 pb-0"><i class="fas fa-tag"></i> Gà Rán Giảm 50%</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a class="item-content" href="">
+                                        <div class="row no-gutters">
+                                            <div class="col-auto">
+                                                <div class="img-restaurant">
+                                                    <img src="https://images.foody.vn/res/g67/668495/prof/s280x175/file_restaurant_photo_ammy_16393-71246a7a-211213123516.jpeg">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="info-restaurant">
+                                                    <div class="name-res">
+                                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                                        Tao Ngộ - Lẩu Gà Lá É - Chicken La-E
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="address-res mb-1">4 địa điểm</div>
+                                                        </div>
+                                                        <div class="col_auto">
+                                                            <div class="item-res-distant"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-res-info">
+                                                        <span class="icon icon-price-tag"></span>
+                                                        "Tối thiểu 20k"
+                                                        <span class="icon icon-money-sm ml-3"></span>
+                                                        "Giá 16k"
+                                                    </div>
+                                                    <p class="kind-restaurant"> Quán ăn</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a class="item-content" href="">
+                                        <div class="row no-gutters">
+                                            <div class="col-auto">
+                                                <div class="img-restaurant">
+                                                    <img src="https://images.foody.vn/res/g13/127978/prof/s280x175/foody-mobile-t-2-jpg-898-635633098986296826.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="info-restaurant">
+                                                    <div class="name-res">
+                                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                                        Chè Hoa - Trần Cao Vân
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="address-res mb-1">15 Trần Cao Vân, P. Đakao, Quận 1, TP. HCM</div>
+                                                        </div>
+                                                        <div class="col_auto">
+                                                            <div class="item-res-distant"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-res-info">
+                                                        <span class="icon icon-price-tag"></span>
+                                                        "Tối thiểu 20k"
+                                                        <span class="icon icon-money-sm ml-3"></span>
+                                                        "Giá 22k"
+                                                    </div>
+                                                    <p class="kind-restaurant"> Ăn vặt/vỉa hè</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a class="item-content" href="">
+                                        <div class="row no-gutters">
+                                            <div class="col-auto">
+                                                <div class="img-restaurant">
+                                                    <img src="https://images.foody.vn/res/g79/781513/prof/s280x175/foody-upload-api-foody-mobile-2-190611091841.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="info-restaurant">
+                                                    <div class="name-res">
+                                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                                        Yoko Sushi
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="address-res mb-1">136 Đường Số 10, Cư Xá Ra Đa, P. 13, Quận 6, TP. HCM</div>
+                                                        </div>
+                                                        <div class="col_auto">
+                                                            <div class="item-res-distant"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-res-info">
+                                                        <span class="icon icon-price-tag"></span>
+                                                        "Tối thiểu 20k"
+                                                        <span class="icon icon-money-sm ml-3"></span>
+                                                        "Giá 40k"
+                                                    </div>
+                                                    <p class="kind-restaurant"> Quán ăn</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="txt-center mt-2">
+                                <button class="btn-none btn-load-more link">
+                                    <span class="pr-1">Xem thêm</span>
+                                    <i class="fas fa-redo font12 "></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="end-check-point"></div>
+                    </div>
+                </div>
+            </div>  
+            <div class="container">
+                <div class="now-container-coporation">
+                    <h4 class="title"><span>Đơn hàng của bạn sẽ được bảo quản như thế nào?</span></h4>
+                    <span>
+                        <p class="font15"> ShopeeFood sẽ bảo quản đơn của bạn bằng túi &amp; thùng để chống nắng mưa, giữ nhiệt... trên đường đi một cách tốt nhất. </p>
+                    </span>
+                    <img src="/asset/Box-food-preservation-footer.png" alt="food preservation">
+                </div> 
+                <div class="now-container-coporation img-right">
+                    <h4 class="title">
+                        <span>Ứng dụng Shopee Partner</span>
+                    </h4>
+                    <span>
+                        <p class="font14">- <b>Ứng dụng Shopee Partner</b> là ứng dụng quản lý đơn hàng cho các nhà hàng đối tác của dịch vụ đặt món tận nơi </p>
+                        <p class="font14"> - <b>ShopeeFood.vn</b> luôn sẵn sàng hợp tác với các nhà hàng, quán ăn, cafe... để mở rộng kinh doanh cũng như gia tăng khách hàng. Hãy kết nối vào hệ thống đặt và giao hàng để giảm bớt chi phí quản lý, vận hành, marketing, công nghệ... <br> Đăng ký tham gia: <b><a href="" target="_blank">tại đây</a></b></p>
+                    </span>
+                    <div class="bg-corporation">
+                        <img src="/asset/banner-phone-reg-merchant.png" alt="" title="" width="294px">
+                    </div>
+                </div>
+                <div class="now-container-coporation img-right">
+                    <h4 class="title">
+                        <a href="">
+                            <span>
+                                <span style="color: #EE4D2D;font-weight: bold;">ShopeeFood.vn</span>
+                                " Hợp tác nhân viên giao nhận - ShopeeFood Driver "
+                            </span>
+                        </a>
+                    </h4>
+                    <span>
+                        <p class="font15">Giúp bạn tăng thu nhập trong thời gian rảnh rỗi</p>
+                        <p>
+                            <span>
+                                <span style="color: #EE4D2D;font-weight: bold;">ShopeeFood</span>
+                                "tìm kiếm hợp tác với các cá nhân để thực hiện việc giao hàng, chúng tôi sẽ cung cấp ứng dụng (app), 1 số dụng cụ cần thiết để bạn có thể tiếp nhận &amp; giao hàng, kiếm thêm thu nhập"
+                                <br>
+                                "Đăng ký tham gia"
+                                <a href="" style="color: #4D77A2; font-weight:bold">tại đây</a>
+                                " hoặc gửi Email qua "
+                                <a href="" style="color: #4D77A2; font-weight:bold">tuyendung@gofast.vn</a>
+                                " - hoặc gọi qua số điện thoại (028) 7109 9179."
+                            </span>
+                        </p>
+                    </span>
+                    <div class="bg-corporation">
+                        <img src="/asset/bg-deliverynow-dat-mon-truc-tuyen-giao-hang-tan-noi.png" class="bg-deliverynow" alt="" title="" width="170px" data-change-lang="" style="width: 170px;">
+                    </div>
+                </div>
+                <div class="seo-footer-link">
+                    <p class="seo-footer-link__head">DANH MỤC</p>
+                    <div class="seo-footer-link__body">
+                        <div class="seo-footer-link__item">
+                            <a href="">
+                                <p class="seo-footer-link__title">Thuốc</p>
+                            </a>
+                            <ul class="seo-footer-link__sub-item-wrapper">
+                                <a href="" class="seo-footer-link__sub-item">Hoá mỹ phẩm</a>
+                                <a href="" class="seo-footer-link__sub-item">BCS</a>
+                                <a href="" class="seo-footer-link__sub-item">Thiết bị</a>
+                                <a href="" class="seo-footer-link__sub-item">Vitamins</a>
+                                <a href="" class="seo-footer-link__sub-item">Thuốc tây</a>
+                                <a href="" class="seo-footer-link__sub-item">Khẩu trang</a>
+                                <a href="" class="seo-footer-link__sub-item">Khẩn cấp</a>
+                            </ul>
+                        </div>
+                        <div class="seo-footer-link__item">
+                            <a href=""><p class="seo-footer-link__title">Thú cưng</p></a>
+                            <ul class="seo-footer-link__sub-item-wrapper">
+                                <a href="" class="seo-footer-link__sub-item">Thú cưng</a>
+                            </ul>
+                        </div>
+                        <div class="seo-footer-link__item">
+                            <a href=""><p class="seo-footer-link__title">ĐỒ ĂN</p></a>
+                            <ul class="seo-footer-link__sub-item-wrapper">
+                                <a href="" class="seo-footer-link__sub-item">Vỉa hè</a>
+                                <a href="" class="seo-footer-link__sub-item">Món lẩu</a>
+                                <a href="" class="seo-footer-link__sub-item">Cơm hộp</a>
+                                <a href="" class="seo-footer-link__sub-item">Đồ uống</a>
+                                <a href="" class="seo-footer-link__sub-item">Đồ chay</a>
+                                <a href="" class="seo-footer-link__sub-item">Bánh kem</a>
+                                <a href="" class="seo-footer-link__sub-item">Tráng miệng</a>
+                                <a href="" class="seo-footer-link__sub-item">Homemade</a>
+                                <a href="" class="seo-footer-link__sub-item">Sushi</a>
+                                <a href="" class="seo-footer-link__sub-item">Mì phở</a>
+                                <a href="" class="seo-footer-link__sub-item">Đồ ăn</a>
+                                <a href="" class="seo-footer-link__sub-item">Pizza/Burgur</a>
+                                <a href="" class="seo-footer-link__sub-item">Món gà</a>
+                            </ul>
+                        </div>
+                        <div class="seo-footer-link__item">
+                            <a href=""><p class="seo-footer-link__title">SẢN PHẨM</p></a>
+                            <ul class="seo-footer-link__sub-item-wrapper">
+                                <a href="" class="seo-footer-link__sub-item">Mỹ phẩm</a>
+                                <a href="" class="seo-footer-link__sub-item">Đồ chơi</a>
+                                <a href="" class="seo-footer-link__sub-item">Sữa</a>
+                                <a href="" class="seo-footer-link__sub-item">Tã bỉm</a>
+                                <a href="" class="seo-footer-link__sub-item">Dụng cụ</a>
+                                <a href="" class="seo-footer-link__sub-item">Quần áo</a>
+                                <a href="" class="seo-footer-link__sub-item">Giày dép</a>
+                                <a href="" class="seo-footer-link__sub-item">Điện tử</a>
+                                <a href="" class="seo-footer-link__sub-item">Trang sức</a>
+                                <a href="" class="seo-footer-link__sub-item">Sản phẩm - TP.HCM</a>
+                            </ul>
+                        </div>
+                        <div class="seo-footer-link__item">
+                            <a href=""><p class="seo-footer-link__title">THỰC PHẨM</p></a>
+                            <ul class="seo-footer-link__sub-item-wrapper">
+                                <a href="" class="seo-footer-link__sub-item">Ăn chay</a>
+                                <a href="" class="seo-footer-link__sub-item">Trái cây</a>
+                                <a href="" class="seo-footer-link__sub-item">Gia vị</a>
+                                <a href="" class="seo-footer-link__sub-item">Đặc sản</a>
+                                <a href="" class="seo-footer-link__sub-item">Thịt/trứng</a>
+                                <a href="" class="seo-footer-link__sub-item">Hải sản</a>
+                                <a href="" class="seo-footer-link__sub-item">Rau củ</a>
+                                <a href="" class="seo-footer-link__sub-item">Gạo mì</a>
+                                <a href="" class="seo-footer-link__sub-item">Đồ uống/Ăn vặt</a>
+                                <a href="" class="seo-footer-link__sub-item">Thực phẩm - TP.HCM</a>
+                            </ul>
+                        </div>
+                        <div class="seo-footer-link__item">
+                            <a href=""><p class="seo-footer-link__title">HOA</p></a>
+                            <ul class="seo-footer-link__sub-item-wrapper">
+                                <a href="" class="seo-footer-link__sub-item">Chia buồn</a>
+                                <a href="" class="seo-footer-link__sub-item">Cây cảnh</a>
+                                <a href="" class="seo-footer-link__sub-item">Chức mừng</a>
+                                <a href="" class="seo-footer-link__sub-item">Sinh nhật</a>
+                                <a href="" class="seo-footer-link__sub-item">Tình yêu</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+            </div> 
+        </div> 
+        <footer class="main-footer">
+            <div class="container">
+                <div class="container-inner">
+                    <div class="block-footer">
+                        <p class="title-block">Công ty</p>
+                        <ul class="menu-footer">
+                            <li class="menu-item">
+                                <a href="-">Giới thiệu</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Trung tâm Trợ giúp</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Quy chế</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Điều khoản sử dụng</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Bảo mật thông tin</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Giải quyết khiếu nại</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Liên hệ</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Hợp tác nhân viên giao nhận</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Đăng ký quán</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">ShopeeFood Uni</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Shopee Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="block-footer">
+                        <p class="title-block">Ứng dụng ShopeeFood</p>
+                        <a class="apps" target="_blank" rel="noopener noreferrer nofollow" href="" title=""><span class="apps__app-store-vi" title=""></span></a>
+                        <a class="apps" target="_blank" rel="noopener noreferrer nofollow" href="" title=""><span class="apps__play-store-vi" title=""></span></a>
+                        <a class="apps" target="_blank" rel="noopener noreferrer nofollow" href="" title=""><span class="apps__huawei-gallery-vi" title=""></span></a>
+                    </div>
+                    <div class="block-footer txt-center">
+                        <div class="logo-footer">
+                            <a class="link" href="">
+                                <img id="delivery-footer-logo" src="/asset/Logo-ShopeefoodVN.png" alt="" title="" width="100">
+                            </a>
+                        </div>
+                        <p class="font12">© 2022  ShopeeFood</p>
+                        <ul class="social-ico">
+                            <li>
+                            <a href="" title="Facebook">
+                                <span class="facebook ico">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                            </a>
+                            </li>
+                            <li>
+                                <a href="" title="Instagram">
+                                    <span class="instagram ico">
+                                        <i class="fab fa-instagram"></i>
+                                    </span>
+                                </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="block-last">
+                        <p class="title-block">Địa chỉ công ty</p>
+                        <span>
+                            <p>Công Ty Cổ Phần Foody</p>
+                            <p>Lầu G, Tòa nhà Jabes 1,</p>
+                            <p>số 244 đường Cống Quỳnh, phường Phạm Ngũ Lão, Quận 1, TPHCM</p>
+                            <p>Giấy CN ĐKDN số: 0311828036</p>
+                            <p>do Sở Kế hoạch và Đầu tư TP.HCM cấp ngày 11/6/2012,</p>
+                            <p>sửa đổi lần thứ 23, ngày 10/12/2020</p>
+                            <p>Số điện thoại: 1900 2042</p>
+                            <p>Email: <a href="">info@shopeefood.vn</a></p>
+                        </span>
+                        <span class="registered">
+                            <a target="_blank" rel="noopener noreferrer nofollow" href="" title="">
+                                <img alt="" src="/asset/gov_seals1.jpg">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("modal-search");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+</body>
+</html>
