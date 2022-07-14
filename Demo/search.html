@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;subset=vietnamese">
+    <link rel="stylesheet" href="/css/demo.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="/js/demo.js"></script>
+
+    <title>Search</title>
+</head>
+<body class="portal">
+    <div id="app">
+        <div class="wrapper">
+            <header class="main-header">
+                <div class="container-header">
+                    <div class="container">
+                        <div class="header-content navbar row  justify-content-between align-items-center">
+                            <div class="logo-now col-auto">
+                                <span>
+                                    <a href="/index.html">
+                                        <img src="/asset/shopeefoodvn.png" alt="ShopeeFood">
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="select-local col-auto">
+                                <div class="dropdown">
+                                    <div onclick="myFunction()" class="dropdown-toggle" role="button" id="local-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">TP. HCM</div>
+                                    <div id="myDropdown" class="dropdown-menu">
+                                        <div class="dropdown-item"><span class="name col">TP. HCM</span><span class="count col-auto">84319 địa điểm</span></div> 
+                                        <div class="dropdown-item"><span class="name col">Hà Nội</span><span class="count col-auto">40998 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Đà Nẵng</span><span class="count col-auto">11579 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Cần Thơ</span><span class="count col-auto">3496 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Hải Phòng</span><span class="count col-auto">4058 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Huế</span><span class="count col-auto">2778 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Khánh Hoà</span><span class="count col-auto">2354 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Đồng Nai</span><span class="count col-auto">4215 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Nghệ An</span><span class="count col-auto">1657 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Vũng Tàu</span><span class="count col-auto">1871 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Bắc Ninh</span><span class="count col-auto">564 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Bình Dương</span><span class="count col-auto">3185 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Điện Biên</span><span class="count col-auto">10448 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Lâm Đồng</span><span class="count col-auto">1444 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Quảng Nam</span><span class="count col-auto">1003 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Quảng Ninh</span><span class="count col-auto">891 địa điểm</span></div>
+                                        <div class="dropdown-item"><span class="name col">Thái Nguyên</span><span class="count col-auto">1017 địa điểm</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-nav col">
+                                <a class="nav-item active" href="/">Đồ ăn</a>
+                                <a class="nav-item " href="">Thực phẩm</a>
+                                <a class="nav-item " href="">Bia</a>
+                                <a class="nav-item " href="">Hoa</a>
+                                <a class="nav-item " href="">Siêu thị</a>
+                                <a class="nav-item " href="">Thuốc</a>
+                                <a class="nav-item " href="">Thú cưng</a>
+                            </div>
+                            <div class="header-icon-search col-auto">
+                                <span data-toggle="modal" data-target="#modal-search">
+                                    <span id="myBtn" class="icon icon-search-dark"></span>
+                                </span>
+                            </div>
+                            <div class="language dropdown col-auto">
+                                <div onclick="myFunction2()" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="icon icon-lag-vn">   
+                                    </span>
+                                </div>
+                                <div id="myDropdown2" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <div class="dropdown-item"><span class="icon icon-lag-en"></span><span class="language-item">Tiếng Anh</span></div>
+                                    <div class="dropdown-item"><span class="icon icon-lag-vn"></span><span class="language-item">Tiếng Việt</span></div>
+                                </div>
+                            </div>
+                            <div class="user-acc col-auto">
+                                <a href="/login.html"><button type="button" class="btn btn-none-bg btn-login">Đăng nhập</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="modal fade modal-search show" id="modal-search" tabindex="-1" role="dialog" style="display: none; padding-right: 16px;">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <span class="close" data-dismiss="modal">x</span>
+                            <div class="modal-search-form">
+                                <span class="sub-title">Đặt Đồ ăn, giao hàng từ 20'... có 70014 địa điểm ở TP. HCM từ 00:00 - 23:59</span>
+                                <form>
+                                    <input class="search-input" name="search-input" type="text" autocomplete="off" value="">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="container">
+               <div class="now-search-filter">
+                    <div class="nav-filter clearfix">
+                        <div class="list-filter">
+                            <div class="item-filter show">
+                                <span onclick="myFunctionDistrict()" class="dropdown-toggle dropbtn" id="District">Khu vực</span>
+                                <div id="myDropdownDistrict" class="dropdown-content">
+                                    <div class="custom-checkbox"><input type="checkbox" data-text="Quận 1" id="district 1"><label for="district 1">Quận 1</label></div>
+                                    <div class="custom-checkbox"><input type="checkbox" data-text="Gò Vấp" id="district 2"><label for="district 2">Gò Vấp</label></div>
+                                    <div class="custom-checkbox"><input type="checkbox" data-text="Quận 2" id="district 4"><label for="district 4">Quận 2</label></div>
+                                    <div class="custom-checkbox"><input type="checkbox" data-text="Quận 3" id="district 5"><label for="district 5">Quận 3</label></div>
+                                    <div class="custom-checkbox"><input type="checkbox" data-text="Quận 4" id="district 6"><label for="district 6">Quận 4</label></div>
+                                    <div class="custom-checkbox"><input type="checkbox" data-text="Quận 5" id="district 7"><label for="district 7">Quận 5</label></div>
+                                </div>
+                            </div>   
+                            <div class="item-filter show">
+                                <span onclick="myFunctionCategory()" class="dropdown-toggle dropbtn" id="Category">Phân loại</span>
+                                <div id="myDropdownCategory" class="dropdown-content">
+                                    <div class="custom-checkbox"><input type="checkbox" data-text="Đồ ăn" id="category 1000000"><label for="category 1000000">Đồ ăn</label></div>
+                                    <div class="custom-checkbox"><input type="checkbox" data-text="Đồ uống" id="category 1000001"><label for="category 1000001">Đồ uống</label></div>
+                                    <div class="custom-checkbox"><input type="checkbox" data-text="Đồ chay" id="category 1000002"><label for="category 1000002">Đồ chay</label></div>
+                                    <div class="custom-checkbox"><input type="checkbox" data-text="Bánh kem" id="category 1000003"><label for="category 1000003">Bánh kem</label></div>
+                                    <div class="custom-checkbox"><input type="checkbox" data-text="Tráng miệng" id="category 1000004"><label for="category 1000004">Tráng miệng</label></div>
+                                    <div class="custom-checkbox"><input type="checkbox" data-text="Homemade" id="category 1000005"><label for="category 1000005">Homemade</label></div>
+                                </div>
+                            </div>     
+                        </div>
+                        <div class="float-right">
+                            <div class="result">200 Kết quả</div>
+                            <select class="filter-sort" name="" id="">
+                                <option value="8">Đúng nhất</option>
+                                <option value="3">Gần tôi</option>
+                                <option value="36">Đánh giá</option>
+                                <option value="35">Bán chạy</option>
+                                <option value="37">Giao nhanh</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="tag-filter"></div>
+               </div>
+               <div class="now-list-restaurant">
+                <div class="list-restaurant">
+                    <div class="item-restaurant">
+                        <a class="item-content" href="">
+                            <div class="img-restaurant">
+                                <img src="https://images.foody.vn/res/g73/729272/prof/s280x175/file_restaurant_photo_0ni4_16405-4f36591a-211227150827.jpg" class="">
+                            </div>
+                            <div class="info-restaurant">
+                                <div class="info-basic-res">
+                                    <h4 class="name-res" title="Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long">
+                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                        Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long
+                                    </h4>
+                                    <div class="address-res" title="Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM">
+                                        Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM
+                                    </div>
+                                </div>
+                                <p class="content-promotion">
+                                    <i class="fas fa-tag"></i>
+                                    JCB giảm 35K
+                                </p>
+                                <div class="opentime-status">
+                                    <span class="stt online" title="Mở cửa" style="color: rgb(35, 152, 57); background-color: rgb(35, 152, 57);"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-restaurant">
+                        <a class="item-content" href="">
+                            <div class="img-restaurant">
+                                <img src="https://images.foody.vn/res/g73/729272/prof/s280x175/file_restaurant_photo_0ni4_16405-4f36591a-211227150827.jpg" class="">
+                            </div>
+                            <div class="info-restaurant">
+                                <div class="info-basic-res">
+                                    <h4 class="name-res" title="Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long">
+                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                        Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long
+                                    </h4>
+                                    <div class="address-res" title="Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM">
+                                        Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM
+                                    </div>
+                                </div>
+                                <p class="content-promotion">
+                                    <i class="fas fa-tag"></i>
+                                    JCB giảm 35K
+                                </p>
+                                <div class="opentime-status">
+                                    <span class="stt online" title="Mở cửa" style="color: rgb(35, 152, 57); background-color: rgb(35, 152, 57);"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-restaurant">
+                        <a class="item-content" href="">
+                            <div class="img-restaurant">
+                                <img src="https://images.foody.vn/res/g73/729272/prof/s280x175/file_restaurant_photo_0ni4_16405-4f36591a-211227150827.jpg" class="">
+                            </div>
+                            <div class="info-restaurant">
+                                <div class="info-basic-res">
+                                    <h4 class="name-res" title="Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long">
+                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                        Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long
+                                    </h4>
+                                    <div class="address-res" title="Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM">
+                                        Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM
+                                    </div>
+                                </div>
+                                <p class="content-promotion">
+                                    <i class="fas fa-tag"></i>
+                                    JCB giảm 35K
+                                </p>
+                                <div class="opentime-status">
+                                    <span class="stt online" title="Mở cửa" style="color: rgb(35, 152, 57); background-color: rgb(35, 152, 57);"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-restaurant">
+                        <a class="item-content" href="">
+                            <div class="img-restaurant">
+                                <img src="https://images.foody.vn/res/g73/729272/prof/s280x175/file_restaurant_photo_0ni4_16405-4f36591a-211227150827.jpg" class="">
+                            </div>
+                            <div class="info-restaurant">
+                                <div class="info-basic-res">
+                                    <h4 class="name-res" title="Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long">
+                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                        Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long
+                                    </h4>
+                                    <div class="address-res" title="Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM">
+                                        Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM
+                                    </div>
+                                </div>
+                                <p class="content-promotion">
+                                    <i class="fas fa-tag"></i>
+                                    JCB giảm 35K
+                                </p>
+                                <div class="opentime-status">
+                                    <span class="stt online" title="Mở cửa" style="color: rgb(35, 152, 57); background-color: rgb(35, 152, 57);"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-restaurant">
+                        <a class="item-content" href="">
+                            <div class="img-restaurant">
+                                <img src="https://images.foody.vn/res/g73/729272/prof/s280x175/file_restaurant_photo_0ni4_16405-4f36591a-211227150827.jpg" class="">
+                            </div>
+                            <div class="info-restaurant">
+                                <div class="info-basic-res">
+                                    <h4 class="name-res" title="Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long">
+                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                        Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long
+                                    </h4>
+                                    <div class="address-res" title="Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM">
+                                        Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM
+                                    </div>
+                                </div>
+                                <p class="content-promotion">
+                                    <i class="fas fa-tag"></i>
+                                    JCB giảm 35K
+                                </p>
+                                <div class="opentime-status">
+                                    <span class="stt online" title="Mở cửa" style="color: rgb(35, 152, 57); background-color: rgb(35, 152, 57);"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-restaurant">
+                        <a class="item-content" href="">
+                            <div class="img-restaurant">
+                                <img src="https://images.foody.vn/res/g73/729272/prof/s280x175/file_restaurant_photo_0ni4_16405-4f36591a-211227150827.jpg" class="">
+                            </div>
+                            <div class="info-restaurant">
+                                <div class="info-basic-res">
+                                    <h4 class="name-res" title="Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long">
+                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                        Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long
+                                    </h4>
+                                    <div class="address-res" title="Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM">
+                                        Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM
+                                    </div>
+                                </div>
+                                <p class="content-promotion">
+                                    <i class="fas fa-tag"></i>
+                                    JCB giảm 35K
+                                </p>
+                                <div class="opentime-status">
+                                    <span class="stt online" title="Mở cửa" style="color: rgb(35, 152, 57); background-color: rgb(35, 152, 57);"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-restaurant">
+                        <a class="item-content" href="">
+                            <div class="img-restaurant">
+                                <img src="https://images.foody.vn/res/g73/729272/prof/s280x175/file_restaurant_photo_0ni4_16405-4f36591a-211227150827.jpg" class="">
+                            </div>
+                            <div class="info-restaurant">
+                                <div class="info-basic-res">
+                                    <h4 class="name-res" title="Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long">
+                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                        Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long
+                                    </h4>
+                                    <div class="address-res" title="Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM">
+                                        Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM
+                                    </div>
+                                </div>
+                                <p class="content-promotion">
+                                    <i class="fas fa-tag"></i>
+                                    JCB giảm 35K
+                                </p>
+                                <div class="opentime-status">
+                                    <span class="stt online" title="Mở cửa" style="color: rgb(35, 152, 57); background-color: rgb(35, 152, 57);"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-restaurant">
+                        <a class="item-content" href="">
+                            <div class="img-restaurant">
+                                <img src="https://images.foody.vn/res/g73/729272/prof/s280x175/file_restaurant_photo_0ni4_16405-4f36591a-211227150827.jpg" class="">
+                            </div>
+                            <div class="info-restaurant">
+                                <div class="info-basic-res">
+                                    <h4 class="name-res" title="Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long">
+                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                        Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long
+                                    </h4>
+                                    <div class="address-res" title="Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM">
+                                        Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM
+                                    </div>
+                                </div>
+                                <p class="content-promotion">
+                                    <i class="fas fa-tag"></i>
+                                    JCB giảm 35K
+                                </p>
+                                <div class="opentime-status">
+                                    <span class="stt online" title="Mở cửa" style="color: rgb(35, 152, 57); background-color: rgb(35, 152, 57);"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-restaurant">
+                        <a class="item-content" href="">
+                            <div class="img-restaurant">
+                                <img src="https://images.foody.vn/res/g73/729272/prof/s280x175/file_restaurant_photo_0ni4_16405-4f36591a-211227150827.jpg" class="">
+                            </div>
+                            <div class="info-restaurant">
+                                <div class="info-basic-res">
+                                    <h4 class="name-res" title="Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long">
+                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                        Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long
+                                    </h4>
+                                    <div class="address-res" title="Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM">
+                                        Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM
+                                    </div>
+                                </div>
+                                <p class="content-promotion">
+                                    <i class="fas fa-tag"></i>
+                                    JCB giảm 35K
+                                </p>
+                                <div class="opentime-status">
+                                    <span class="stt online" title="Mở cửa" style="color: rgb(35, 152, 57); background-color: rgb(35, 152, 57);"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item-restaurant">
+                        <a class="item-content" href="">
+                            <div class="img-restaurant">
+                                <img src="https://images.foody.vn/res/g73/729272/prof/s280x175/file_restaurant_photo_0ni4_16405-4f36591a-211227150827.jpg" class="">
+                            </div>
+                            <div class="info-restaurant">
+                                <div class="info-basic-res">
+                                    <h4 class="name-res" title="Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long">
+                                        <span class="icon icon-quality-merchant" title="Đây là 1 trong những Merchants được đánh giá cao trong ShopeeFood"></span>
+                                        Bánh Tráng Chấm Cô Gánh - Chung Cư A4 Phan Xích Long
+                                    </h4>
+                                    <div class="address-res" title="Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM">
+                                        Lô D001 Chung Cư A4 Phan xích Long, P. 7, Phú Nhuận, TP. HCM
+                                    </div>
+                                </div>
+                                <p class="content-promotion">
+                                    <i class="fas fa-tag"></i>
+                                    JCB giảm 35K
+                                </p>
+                                <div class="opentime-status">
+                                    <span class="stt online" title="Mở cửa" style="color: rgb(35, 152, 57); background-color: rgb(35, 152, 57);"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+               </div>
+               <ul class="pagination">
+                <li class="disabled"><a class="" href="#"><span class="icon icon-paging-pre"></span></a></li>
+                <li class="active"><a class="undefined" href="#">1</a></li>
+                <li class=""><a class="" href="#">2</a></li>
+                <li class=""><a class="" href="#">3</a></li>
+                <li class=""><a class="" href="#">4</a></li>
+                <li class=""><a class="" href="#">5</a></li>
+                <li class=""><a class="" href="#">6</a></li>
+                <li class=""><a class="" href="#">7</a></li>
+                <li class=""><a class="" href="#">8</a></li>
+                <li class=""><a class="" href="#"><span class="icon icon-paging-next"></span></a></li>
+               </ul>
+            </div>
+        </div> 
+        <footer class="main-footer">
+            <div class="container">
+                <div class="container-inner">
+                    <div class="block-footer">
+                        <p class="title-block">Công ty</p>
+                        <ul class="menu-footer">
+                            <li class="menu-item">
+                                <a href="-">Giới thiệu</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Trung tâm Trợ giúp</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Quy chế</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Điều khoản sử dụng</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Bảo mật thông tin</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Giải quyết khiếu nại</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Liên hệ</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Hợp tác nhân viên giao nhận</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Đăng ký quán</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">ShopeeFood Uni</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="">Shopee Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="block-footer">
+                        <p class="title-block">Ứng dụng ShopeeFood</p>
+                        <a class="apps" target="_blank" rel="noopener noreferrer nofollow" href="" title=""><span class="apps__app-store-vi" title=""></span></a>
+                        <a class="apps" target="_blank" rel="noopener noreferrer nofollow" href="" title=""><span class="apps__play-store-vi" title=""></span></a>
+                        <a class="apps" target="_blank" rel="noopener noreferrer nofollow" href="" title=""><span class="apps__huawei-gallery-vi" title=""></span></a>
+                    </div>
+                    <div class="block-footer txt-center">
+                        <div class="logo-footer">
+                            <a class="link" href="">
+                                <img id="delivery-footer-logo" src="/asset/Logo-ShopeefoodVN.png" alt="" title="" width="100">
+                            </a>
+                        </div>
+                        <p class="font12">© 2022  ShopeeFood</p>
+                        <ul class="social-ico">
+                            <li>
+                            <a href="" title="Facebook">
+                                <span class="facebook ico">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                            </a>
+                            </li>
+                            <li>
+                                <a href="" title="Instagram">
+                                    <span class="instagram ico">
+                                        <i class="fab fa-instagram"></i>
+                                    </span>
+                                </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="block-last">
+                        <p class="title-block">Địa chỉ công ty</p>
+                        <span>
+                            <p>Công Ty Cổ Phần Foody</p>
+                            <p>Lầu G, Tòa nhà Jabes 1,</p>
+                            <p>số 244 đường Cống Quỳnh, phường Phạm Ngũ Lão, Quận 1, TPHCM</p>
+                            <p>Giấy CN ĐKDN số: 0311828036</p>
+                            <p>do Sở Kế hoạch và Đầu tư TP.HCM cấp ngày 11/6/2012,</p>
+                            <p>sửa đổi lần thứ 23, ngày 10/12/2020</p>
+                            <p>Số điện thoại: 1900 2042</p>
+                            <p>Email: <a href="">info@shopeefood.vn</a></p>
+                        </span>
+                        <span class="registered">
+                            <a target="_blank" rel="noopener noreferrer nofollow" href="" title="">
+                                <img alt="" src="/asset/gov_seals1.jpg">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("modal-search");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+         <script>
+            /* When the user clicks on the button,
+            toggle between hiding and showing the dropdown content */
+            function myFunctionDistrict() {
+              document.getElementById("myDropdownDistrict").classList.toggle("show");
+            }
+            
+            function filterFunction() {
+              var input, filter, ul, li, a, i;
+              input = document.getElementById("myInput");
+              filter = input.value.toUpperCase();
+              div = document.getElementById("myDropdownDistrict");
+              a = div.getElementsByTagName("a");
+              for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  a[i].style.display = "";
+                } else {
+                  a[i].style.display = "none";
+                }
+              }
+            }
+            </script>   
+            <script>
+                /* When the user clicks on the button,
+                toggle between hiding and showing the dropdown content */
+                function myFunctionCategory() {
+                  document.getElementById("myDropdownCategory").classList.toggle("show");
+                }
+                
+                function filterFunction() {
+                  var input, filter, ul, li, a, i;
+                  input = document.getElementById("myInput");
+                  filter = input.value.toUpperCase();
+                  div = document.getElementById("myDropdownCategory");
+                  a = div.getElementsByTagName("a");
+                  for (i = 0; i < a.length; i++) {
+                    txtValue = a[i].textContent || a[i].innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                      a[i].style.display = "";
+                    } else {
+                      a[i].style.display = "none";
+                    }
+                  }
+                }
+                </script>   
+</body>
+</html>
