@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/demo.css">
+    <script src="/js/demo.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+    <title>Homepage</title>
+</head>
+<body>
+    <div>
+        <div style="padding-top: 70px;">
+
+            <header>
+                <div class="container-header">
+                    <div class="container">
+                        <div class="header-content navbar row  justify-content-between align-items-center" style="display: flex;">
+                            <div class="logo">
+                                <span><a href="/homepage.html"><img src="https://shopeefood.vn/app/assets/img/shopeefoodvn.png?4aa1a38e8da801f4029b80734905f3f7" alt="ShopeeFood"></a></span>
+                            </div>
+                            <div class="select-city">
+                                <div class="dropdown">
+                                    <button id="1" onclick="myFunction();changecityFunction()" class="dropbtn dropdown-city" style="color: red;">TP.HCM</button>
+                                    <div id="myDropdown" class="dropdown-content">
+                                    </div>
+                                </div>
+                            </div>
+                            <div onclick="" id="category-nav" class="main-nav">
+                            </div>
+                            <div class="search-modal" style="padding-left: 300px;">
+                                <button id="myBtn" class="button-modal-search"></button>
+                                    <div id="myModal" class="modal">
+                                        <div class="modal-content" style="background-color: transparent;">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-search">
+                                                <span class="modal-text">Đặt Đồ ăn, giao hàng từ 20'... có 70285 địa điểm ở TP. HCM từ 00:00 - 23:59</span>
+                                                <form><input class="search-input" name="search-input" type="text" autocomplete="off" value=""></form>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="user-login" style="padding-left: 50px;">
+                                <a href="/login.html"><button type="button" class="btn-login">Đăng nhập</button></a>
+                                
+                            </div>
+                            <div class="language-dropdown" style="padding-right:100px; ">
+                                <div class="dropdown">
+                                    <span onclick="myFunction2()"  class=" dropbtn2 icon icon-lag-vn" style="cursor: pointer;"></span>
+                                    <div id="myDropdown2" class="dropdown-content">
+                                        <div class="dropdown-language-item"><span class="icon icon-lag-en"></span><span class="language-item">Tiếng Anh</span></div>
+                                        <div class="dropdown-language-item"><span class="icon icon-lag-vn"></span><span class="language-item">Tiếng Việt</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div id="myP" class="banner" style="position: fixed; top: 70px;">
+                <div class="container">
+                    <div class="left-search">
+                        <div><h1 class="title">Đặt Đồ ăn, giao hàng từ 20'...</h1><div class="local">có 70218 địa điểm ở TP. HCM từ 00:00 - 23:59</div></div>
+                        <div class="form-search">
+                            <div class="input-group">
+                                <input type="text" id="txtSearchHome" placeholder="Tìm địa điểm, món ăn, địa chỉ..." value="">
+                                <a href="">
+                                    <button type="button" class="btn btn-search"><span class="icon icon-search"></span></button>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="restaurant-type-body" class="category-list-filter" style="margin-bottom: -15px;">
+                            <a href="/search.html" class="category-item">All</a>
+                        </div>
+                        <div>
+                            <div class="" style="font-size: 20px;margin: 10px;">Sử dụng App ShopeeFood để có nhiều giảm giá <br>và trải nghiệm tốt hơn</div>
+                            <a target="" href="" title="App Store"><span class="icon icon-app-store-big"></span></a>
+                            <a target="" rel="" href="" title="Google play"><span class="icon icon-gg-play-big"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contain-main-home clearfix">
+                <div class="container">
+                    <div class="main-right-home">
+                        <div class="user-get-local">
+                            <div class="" style="align-items: center;">
+                            <div>
+                                <span>Đồ ăn   ->   Chọn địa chỉ giao hàng</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="now-list-restaurant">
+                        <div class="" style="display: flex;justify-content: space-between;">
+                            <h3 class="title">Ưu đãi</h3>
+                            <a href="" class="view-all">
+                                Xem tất cả
+                            </a>
+                        </div>
+                        <div id="top-list-restaurant" class="list-restaurant">
+                            <!-- <div class="item-restaurant">
+                                <a href="/detail.html" class="item-content">
+                                    <div class="img-restaurant">
+                                        <img src="https://images.foody.vn/res/g103/1024417/prof/s280x175/foody-upload-api-foody-mobile-hmzz-200520100244.jpg" class="">
+                                    </div>
+                                    <div class="info-restaurant">
+                                        <div class="info-basic-res"><h4 class="name-res" title="Bếp Bà Muối - Ăn Vặt Online">Bếp Bà Muối - Ăn Vặt Online</h4><div class="address-res" title="606/52 Đường 3 Tháng 2, P. 14, Quận 10, TP. HCM">606/52 Đường 3 Tháng 2, P. 14, Quận 10, TP. HCM</div></div>
+                                        <div class="content-promotion">
+                                            Giảm món
+                                        </div>
+                                    </div>
+                                </a>
+                            </div> -->
+                        </div>
+                        <div class="" style="text-align: center;"><a href="">Xem thêm</a></div>
+                    </div>
+                    <div class="now-list-restaurant">
+                        <div class="" style="display: flex;justify-content: space-between;">
+                            <h3 class="title">Bộ sưu tập</h3>
+                            <a href="" class="view-all">
+                                Xem tất cả
+                            </a>
+                        </div>
+                        <div class="list-restaurant">
+                            <div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" title="" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/delivery/collection/s320x200/image-d5484e9b-220706130510.jpeg" class="">
+                                        </div>
+                                        <div class="info-restaurant info-basic-res">
+                                            <h4 class="name-res" title="Lễ hội ẩm thực Coca-Cola">Lễ hội ẩm thực Coca-Cola</h4>
+                                            <div class="txt-blue font12">200 địa điểm</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" title="" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/delivery/collection/s320x200/image-d5484e9b-220706130510.jpeg" class="">
+                                        </div>
+                                        <div class="info-restaurant info-basic-res">
+                                            <h4 class="name-res" title="Lễ hội ẩm thực Coca-Cola">Lễ hội ẩm thực Coca-Cola</h4>
+                                            <div class="txt-blue font12">200 địa điểm</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" title="" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/delivery/collection/s320x200/image-d5484e9b-220706130510.jpeg" class="">
+                                        </div>
+                                        <div class="info-restaurant info-basic-res">
+                                            <h4 class="name-res" title="Lễ hội ẩm thực Coca-Cola">Lễ hội ẩm thực Coca-Cola</h4>
+                                            <div class="txt-blue font12">200 địa điểm</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" title="" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/delivery/collection/s320x200/image-d5484e9b-220706130510.jpeg" class="">
+                                        </div>
+                                        <div class="info-restaurant info-basic-res">
+                                            <h4 class="name-res" title="Lễ hội ẩm thực Coca-Cola">Lễ hội ẩm thực Coca-Cola</h4>
+                                            <div class="txt-blue font12">200 địa điểm</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" title="" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/delivery/collection/s320x200/image-d5484e9b-220706130510.jpeg" class="">
+                                        </div>
+                                        <div class="info-restaurant info-basic-res">
+                                            <h4 class="name-res" title="Lễ hội ẩm thực Coca-Cola">Lễ hội ẩm thực Coca-Cola</h4>
+                                            <div class="txt-blue font12">200 địa điểm</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" title="" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/delivery/collection/s320x200/image-d5484e9b-220706130510.jpeg" class="">
+                                        </div>
+                                        <div class="info-restaurant info-basic-res">
+                                            <h4 class="name-res" title="Lễ hội ẩm thực Coca-Cola">Lễ hội ẩm thực Coca-Cola</h4>
+                                            <div class="txt-blue font12">200 địa điểm</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" title="" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/delivery/collection/s320x200/image-d5484e9b-220706130510.jpeg" class="">
+                                        </div>
+                                        <div class="info-restaurant info-basic-res">
+                                            <h4 class="name-res" title="Lễ hội ẩm thực Coca-Cola">Lễ hội ẩm thực Coca-Cola</h4>
+                                            <div class="txt-blue font12">200 địa điểm</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" title="" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/delivery/collection/s320x200/image-d5484e9b-220706130510.jpeg" class="">
+                                        </div>
+                                        <div class="info-restaurant info-basic-res">
+                                            <h4 class="name-res" title="Lễ hội ẩm thực Coca-Cola">Lễ hội ẩm thực Coca-Cola</h4>
+                                            <div class="txt-blue font12">200 địa điểm</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item-restaurant">
+                                    <a target="_blank" class="item-content" title="" href="">
+                                        <div class="img-restaurant">
+                                            <img src="https://images.foody.vn/delivery/collection/s320x200/image-d5484e9b-220706130510.jpeg" class="">
+                                        </div>
+                                        <div class="info-restaurant info-basic-res">
+                                            <h4 class="name-res" title="Lễ hội ẩm thực Coca-Cola">Lễ hội ẩm thực Coca-Cola</h4>
+                                            <div class="txt-blue font12">200 địa điểm</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="" style="text-align: center;"><a href="">Xem thêm</a></div>
+                    </div>
+                    <div class="now-list-restaurant">
+                        <div class="header-tab" style="font-size: 16px;padding-top: 2px;padding-bottom: 8px;align-items: center;">
+                            <div class="col">
+                                <button class="item-tab active">Gần tôi</button>
+                                <button class="item-tab false">Bán chạy</button>
+                                <button class="item-tab false">Đánh giá</button>
+                                <button class="item-tab false">Giao nhanh</button>
+                                <select name="districtId">
+                                    <option value="-1">Chọn quận/ huyện</option>
+                                    <option value="1">Quận 1</option>
+                                    <option value="2">Quận 2</option>
+                                    <option value="3">Quận 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="list-restaurant">
+                            <div class="item-restaurant" style="padding: 8px;width: 100%">
+                                <a href="" class="item-content">
+                                    <div class="row no-gutters">
+                                        <div class="col-auto">
+                                            <div class="img-restaurant" style="width: 142px;border-radius: 4px;height: 90px;">
+                                                <img src="https://images.foody.vn/res/g4/38121/prof/s280x175/foody-mobile-w487r6a0-jpg-439-635858718115795391.jpg" class="">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="info-restaurant">
+                                                <div class="name-restaurant" style="font-size: 16px; padding-top: 0;font-weight: 700;color: black;" >Cơm Chiên & Nui Xào Bò - Cống Quỳnh</div>
+                                                <div class="address-res mb-1">102/12 Cống Quỳnh, Quận 1, TP. HCM</div>
+                                                <div class="item-res-info"><span class=""></span> Tối thiểu 20k<span class=""></span> Giá 37k</div>
+                                                <div>Quán ăn</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item-restaurant" style="padding: 8px;width: 100%">
+                                <a href="" class="item-content">
+                                    <div class="row no-gutters">
+                                        <div class="col-auto">
+                                            <div class="img-restaurant" style="width: 142px;border-radius: 4px;height: 90px;">
+                                                <img src="https://images.foody.vn/res/g4/38121/prof/s280x175/foody-mobile-w487r6a0-jpg-439-635858718115795391.jpg" class="">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="info-restaurant">
+                                                <div class="name-restaurant" style="font-size: 16px; padding-top: 0;font-weight: 700;color: black;" >Cơm Chiên & Nui Xào Bò - Cống Quỳnh</div>
+                                                <div class="address-res mb-1">102/12 Cống Quỳnh, Quận 1, TP. HCM</div>
+                                                <div class="item-res-info"><span class=""></span> Tối thiểu 20k<span class=""></span> Giá 37k</div>
+                                                <div>Quán ăn</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item-restaurant" style="padding: 8px;width: 100%">
+                                <a href="" class="item-content">
+                                    <div class="row no-gutters">
+                                        <div class="col-auto">
+                                            <div class="img-restaurant" style="width: 142px;border-radius: 4px;height: 90px;">
+                                                <img src="https://images.foody.vn/res/g4/38121/prof/s280x175/foody-mobile-w487r6a0-jpg-439-635858718115795391.jpg" class="">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="info-restaurant">
+                                                <div class="name-restaurant" style="font-size: 16px; padding-top: 0;font-weight: 700;color: black;" >Cơm Chiên & Nui Xào Bò - Cống Quỳnh</div>
+                                                <div class="address-res mb-1">102/12 Cống Quỳnh, Quận 1, TP. HCM</div>
+                                                <div class="item-res-info"><span class=""></span> Tối thiểu 20k<span class=""></span> Giá 37k</div>
+                                                <div>Quán ăn</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item-restaurant" style="padding: 8px;width: 100%">
+                                <a href="" class="item-content">
+                                    <div class="row no-gutters">
+                                        <div class="col-auto">
+                                            <div class="img-restaurant" style="width: 142px;border-radius: 4px;height: 90px;">
+                                                <img src="https://images.foody.vn/res/g4/38121/prof/s280x175/foody-mobile-w487r6a0-jpg-439-635858718115795391.jpg" class="">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="info-restaurant">
+                                                <div class="name-restaurant" style="font-size: 16px; padding-top: 0;font-weight: 700;color: black;" >Cơm Chiên & Nui Xào Bò - Cống Quỳnh</div>
+                                                <div class="address-res mb-1">102/12 Cống Quỳnh, Quận 1, TP. HCM</div>
+                                                <div class="item-res-info"><span class=""></span> Tối thiểu 20k<span class=""></span> Giá 37k</div>
+                                                <div>Quán ăn</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item-restaurant" style="padding: 8px;width: 100%">
+                                <a href="" class="item-content">
+                                    <div class="row no-gutters">
+                                        <div class="col-auto">
+                                            <div class="img-restaurant" style="width: 142px;border-radius: 4px;height: 90px;">
+                                                <img src="https://images.foody.vn/res/g4/38121/prof/s280x175/foody-mobile-w487r6a0-jpg-439-635858718115795391.jpg" class="">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="info-restaurant">
+                                                <div class="name-restaurant" style="font-size: 16px; padding-top: 0;font-weight: 700;color: black;" >Cơm Chiên & Nui Xào Bò - Cống Quỳnh</div>
+                                                <div class="address-res mb-1">102/12 Cống Quỳnh, Quận 1, TP. HCM</div>
+                                                <div class="item-res-info"><span class=""></span> Tối thiểu 20k<span class=""></span> Giá 37k</div>
+                                                <div>Quán ăn</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="item-restaurant" style="padding: 8px;width: 100%">
+                                <a href="" class="item-content">
+                                    <div class="row no-gutters">
+                                        <div class="col-auto">
+                                            <div class="img-restaurant" style="width: 142px;border-radius: 4px;height: 90px;">
+                                                <img src="https://images.foody.vn/res/g4/38121/prof/s280x175/foody-mobile-w487r6a0-jpg-439-635858718115795391.jpg" class="">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="info-restaurant">
+                                                <div class="name-restaurant" style="font-size: 16px; padding-top: 0;font-weight: 700;color: black;" >Cơm Chiên & Nui Xào Bò - Cống Quỳnh</div>
+                                                <div class="address-res mb-1">102/12 Cống Quỳnh, Quận 1, TP. HCM</div>
+                                                <div class="item-res-info"><span class=""></span> Tối thiểu 20k<span class=""></span> Giá 37k</div>
+                                                <div>Quán ăn</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="" style="text-align: center;"><a href="">Xem thêm</a></div>
+                    </div>
+                </div>  
+            </div>
+            </div>
+            <div class="container">
+                <div class="container-coporation">
+                    <h4 class="title" style="font-size: 22px;font-weight: 700;"><span>Đơn hàng của bạn sẽ được bảo quản như thế nào?</span></h4>
+                    <span>
+                        <p> ShopeeFood sẽ bảo quản đơn của bạn bằng túi & thùng để chống nắng mưa, giữ nhiệt... trên đường đi một cách tốt nhất. </p>
+                    </span>
+                    <img src="/asset/Box-food-preservation-footer.png" alt="">
+                </div>
+                <div class="container-coporation" style="padding: 50px 350px 50px 150px">
+                    <h4 class="title" style="font-size: 22px;font-weight: 700;"><span>Ứng dụng Shopee Partner</span></h4>
+                    <span>
+                        <p><b>Ứng dụng Shopee Partner</b> là ứng dụng quản lý đơn hàng cho các nhà hàng đối tác của dịch vụ đặt món tận nơi </p>
+                    </span>
+                    <span>
+                        <p><b>ShopeeFood.vn</b> luôn sẵn sàng hợp tác với các nhà hàng, quán ăn, cafe... để mở rộng kinh doanh cũng như gia tăng khách hàng. Hãy kết nối vào hệ thống đặt và giao hàng để giảm bớt chi phí quản lý, vận hành, marketing, công nghệ... <br> Đăng ký tham gia: <b><a href="" target="">tại đây</a></b></p>
+                    </span>
+                    <div class="bg-corporation">
+                        <img src="/asset/banner-phone-reg-merchant.png" alt="" title="" width="294px">
+                    </div>
+                </div>
+                <div class="container-coporation" style="padding: 50px 350px 50px 150px">
+                    <h4 class="title" style="font-size: 22px;font-weight: 700;"><a href="">ShopeeFood.vn Hợp tác nhân viên giao nhận - ShopeeFood Driver</a></h4>
+                    <span>
+                        <p>Giúp bạn tăng thu nhập trong thời gian rảnh rỗi</p>
+                    </span>
+                    <span>
+                        <p>ShopeeFood tìm kiếm hợp tác với các cá nhân để thực hiện việc giao hàng, chúng tôi sẽ cung cấp ứng dụng (app), 1 số dụng cụ cần thiết để bạn có thể tiếp nhận & giao hàng, kiếm thêm thu nhập
+                            Đăng ký tham gia <a href="">tại đây</a> hoặc gửi Email qua <a href="">tuyendung@gofast.vn</a>  - hoặc gọi qua số điện thoại (028) 7109 9179.</b></p>
+                    </span>
+                    <div class="bg-corporation">
+                        <img src="/asset/bg-deliverynow-dat-mon-truc-tuyen-giao-hang-tan-noi.png" alt="" title="" width="170px">
+                    </div>
+                </div>
+                <div class="" style="margin:50px 0">
+                    <p class="seo-footer-link__head">Danh mục</p>
+                    <div class="seo-footer-link__body">
+                        <div class="seo-footer-link__item">
+                            <a href="">
+                                <p class="seo-footer-link__title">Thuốc</p>
+                            </a>
+                            <ul class="seo-footer-link__sub-item-wrapper">
+                                <a href="" class="seo-footer-link__sub-item">Hoá mỹ phẩm</a>
+                                <a href="" class="seo-footer-link__sub-item">BCS</a>
+                                <a href="" class="seo-footer-link__sub-item">Thiết bị</a>
+                                <a href="" class="seo-footer-link__sub-item">Vitamins</a>
+                                <a href="" class="seo-footer-link__sub-item">Thuốc tây</a>
+                                <a href="" class="seo-footer-link__sub-item">Khẩu trang</a>
+                                <a href="" class="seo-footer-link__sub-item">Khẩn cấp</a>
+                            </ul>
+                        </div>
+                        <div class="seo-footer-link__item">
+                            <a href="">
+                                <p class="seo-footer-link__title">Thú cưng</p>
+                            </a>
+                            <ul class="seo-footer-link__sub-item-wrapper">
+                                <a href="" class="seo-footer-link__sub-item">Thú cưng</a>
+                            </ul>
+                        </div>
+                        <div class="seo-footer-link__item">
+                            <a href="">
+                                <p class="seo-footer-link__title">Đồ ăn Homepage</p>
+                            </a>
+                            <ul class="seo-footer-link__sub-item-wrapper">
+                            </ul>
+                        </div>
+                        <div class="seo-footer-link__item">
+                            <a href="">
+                                <p class="seo-footer-link__title">Đồ ăn</p>
+                            </a>
+                            <ul class="seo-footer-link__sub-item-wrapper">
+                                <a href="" class="seo-footer-link__sub-item">Vỉa hè</a>
+                                <a href="" class="seo-footer-link__sub-item">Món lẩu</a>
+                                <a href="" class="seo-footer-link__sub-item">Cơm hộp</a>
+                                <a href="" class="seo-footer-link__sub-item">Đồ uống</a>
+                                <a href="" class="seo-footer-link__sub-item">Đồ chay</a>
+                                <a href="" class="seo-footer-link__sub-item">Bánh kem</a>
+                                <a href="" class="seo-footer-link__sub-item">Tráng miệng</a>
+                                <a href="" class="seo-footer-link__sub-item">Homemade</a>
+                                <a href="" class="seo-footer-link__sub-item">Sushi</a>
+                                <a href="" class="seo-footer-link__sub-item">Mì phở</a>
+                                <a href="" class="seo-footer-link__sub-item">Đồ ăn</a>
+                                <a href="" class="seo-footer-link__sub-item">Pizza/Burger</a>
+                                <a href="" class="seo-footer-link__sub-item">Món gà</a>
+                            </ul>
+                        </div>
+                        <div class="seo-footer-link__item">
+                            <a href="">
+                                <p class="seo-footer-link__title">Thuốc</p>
+                            </a>
+                            <ul class="seo-footer-link__sub-item-wrapper">
+                                <a href="" class="seo-footer-link__sub-item">Hoá mỹ phẩm</a>
+                                <a href="" class="seo-footer-link__sub-item">BCS</a>
+                                <a href="" class="seo-footer-link__sub-item">Thiết bị</a>
+                                <a href="" class="seo-footer-link__sub-item">Vitamins</a>
+                                <a href="" class="seo-footer-link__sub-item">Thuốc tây</a>
+                                <a href="" class="seo-footer-link__sub-item">Khẩu trang</a>
+                                <a href="" class="seo-footer-link__sub-item">Khẩn cấp</a>
+                            </ul>
+                        </div>
+                        <div class="seo-footer-link__item">
+                            <a href="">
+                                <p class="seo-footer-link__title">Thuốc</p>
+                            </a>
+                            <ul class="seo-footer-link__sub-item-wrapper">
+                                <a href="" class="seo-footer-link__sub-item">Hoá mỹ phẩm</a>
+                                <a href="" class="seo-footer-link__sub-item">BCS</a>
+                                <a href="" class="seo-footer-link__sub-item">Thiết bị</a>
+                                <a href="" class="seo-footer-link__sub-item">Vitamins</a>
+                                <a href="" class="seo-footer-link__sub-item">Thuốc tây</a>
+                                <a href="" class="seo-footer-link__sub-item">Khẩu trang</a>
+                                <a href="" class="seo-footer-link__sub-item">Khẩn cấp</a>
+                            </ul>
+                        </div>
+                        <div class="seo-footer-link__item">
+                            <a href="">
+                                <p class="seo-footer-link__title">Thuốc</p>
+                            </a>
+                            <ul class="seo-footer-link__sub-item-wrapper">
+                                <a href="" class="seo-footer-link__sub-item">Hoá mỹ phẩm</a>
+                                <a href="" class="seo-footer-link__sub-item">BCS</a>
+                                <a href="" class="seo-footer-link__sub-item">Thiết bị</a>
+                                <a href="" class="seo-footer-link__sub-item">Vitamins</a>
+                                <a href="" class="seo-footer-link__sub-item">Thuốc tây</a>
+                                <a href="" class="seo-footer-link__sub-item">Khẩu trang</a>
+                                <a href="" class="seo-footer-link__sub-item">Khẩn cấp</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        <footer style="clear: both;">
+            <div class="container">
+                <div class="">
+                    <div class="footer-left">
+                        <p class="footer-title">Công ty</p>
+                        <br>
+                        <div class="footer-company"><a href="">Giới thiệu</a></div>
+                        <div class="footer-company"><a href="">Trung tâm trợ giúp</a></div>
+                        <div class="footer-company"><a href="">Quy chế</a></div>
+                        <div class="footer-company"><a href="">Điều khoản sử dụng</a></div>
+                        <div class="footer-company"><a href="">Bảo mật thông tin</a></div>
+                        <div class="footer-company"> <a href="">Giải quyết khiếu nại</a></div>
+                        <div class="footer-company"><a href="">Liên hệ</a></div>
+                        <div class="footer-company"><a href="">Hợp tác nhân viên giao nhận</a></div>
+                        <div class="footer-company"><a href="">Đăng ký quán</a></div>
+                        <div class="footer-company"><a href="">ShopeeFoodUni</a></div>
+                        <div class="footer-company"><a href="">Shopee Blog</a></div>       
+                    </div>
+                </div>
+                <div class="footer-left">
+                    <p class="footer-title">Ứng dụng ShopeeFood</p>
+                    <br>
+                    <a href="" class="footer-apps"><span class="footer-app-store"></span></a>
+                    <a href="" class="footer-apps"><span class="footer-google-play"></span></a>
+                    <a href="" class="footer-apps"><span class="footer-huawei"></span></a>
+                </div>
+                <div class="footer-left" style="text-align: center;">
+                    <div class="">
+                        <a href="">
+                            <img src="https://shopeefood.vn/app/assets/img/Logo-ShopeefoodVN.png?a233b36c37415f85f46c25a6cd0963aa" alt="">
+                        </a>
+                    </div>
+                    <p>© 2022  ShopeeFood</p>
+                    <ul class="social-icon">
+                        <li>
+                            <a href="">
+                                <span class="icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-last">
+                    <p class="footer-title">Địa chỉ công ty</p>
+                    <span>
+                        <p>Công Ty Cổ Phần Foody</p>
+                        <p>Lầu G, Tòa nhà Jabes 1,</p>
+                        <p>số 244 đường Cống Quỳnh, phường Phạm Ngũ Lão, Quận 1, TPHCM</p>
+                        <p>Giấy CN ĐKDN số: 0311828036</p>
+                        <p>do Sở Kế hoạch và Đầu tư TP.HCM cấp ngày 11/6/2012,</p>
+                        <p>sửa đổi lần thứ 23, ngày 10/12/2020</p>
+                        <p>Số điện thoại: 1900 2042</p>
+                        <p>Email: <a href="">info@shopeefood.vn</a></p>
+                    </span>
+                    <span class="last-icon">
+                        <a href="">
+                            <img style="width: 100%;" src="/asset/gov_seals1.jpg" alt="">
+                        </a>
+                    </span>
+                </div>
+            </div>
+            </div>
+        </footer>
+        <!-- <script src="./js/city.js"></script>
+        <script src="/js/category.js"></script>
+        <script src="/js/restauranttype.js"></script>
+        <script src="/js/restaurant.js"></script> -->
+        <script src="/js/homepage.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction2() {
+          document.getElementById("myDropdown2").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn2')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content2");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
+    <script>
+        function changecityFunction() {
+            var btn1 = document.getElementsByClassName("dropbtn dropdown-city")[0];
+            var btns = document.getElementsByClassName("city-dropdown");
+            console.log(btn1.innerHTML);
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click",()=>{
+                    btn1.innerHTML=btns[i].innerHTML
+                    btn1.id=btns[i].id
+                })
+            }
+        }
+    </script>
+</body>
+</html>
