@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/demo.css">
+    <script src="/js/demo.js"></script>
+
+
+    <title>Register</title>
+</head>
+<body>
+    <div>
+        <div style="padding-top: 70px;">
+
+            <header>
+                <div class="container-header">
+                    <div class="container">
+                        <div class="header-content navbar row  justify-content-between align-items-center" style="display: flex;">
+                            <div class="logo">
+                                <span><a href="/homepage.html"><img src="https://shopeefood.vn/app/assets/img/shopeefoodvn.png?4aa1a38e8da801f4029b80734905f3f7" alt="ShopeeFood"></a></span>
+                            </div>
+                            <div class="select-city">
+                                <div class="dropdown">
+                                    <button onclick="myFunction()" class="dropbtn dropdown-city" style="color: red;">TP. HCM</button>
+                                    <div id="myDropdown" class="dropdown-content">
+                                      <a href="">TP. HCM</a>
+                                      <a href="">Hà nội</a>
+                                      <a href="">Đà nẵng</a>
+                                      <a href="">Cần thơ</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-nav">
+                                <a class="nav-item active" href="" style="padding: 10px 12px 21px;">Đồ ăn</a>
+                                <a class="nav-item " href="" style="padding: 10px 12px 21px;">Thực phẩm</a>
+                                <a class="nav-item " href="" style="padding: 10px 12px 21px;">Bia</a>
+                                <a class="nav-item " href="" style="padding: 10px 12px 21px;">Hoa</a>
+                                <a class="nav-item " href="" style="padding: 10px 12px 21px;">Siêu thị</a>
+                                <a class="nav-item " href="" style="padding: 10px 12px 21px;">Thú cưng</a>
+                            </div>
+                            <div class="search-modal" style="padding-left: 300px;">
+                                <button id="myBtn" class="button-modal-search"></button>
+                                    <div id="myModal" class="modal">
+                                        <div class="modal-content" style="background-color: transparent;">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-search">
+                                                <span class="modal-text">Đặt Đồ ăn, giao hàng từ 20'... có 70285 địa điểm ở TP. HCM từ 00:00 - 23:59</span>
+                                                <form><input class="search-input" name="search-input" type="text" autocomplete="off" value=""></form>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="user-login" style="padding-left: 50px;">
+                                <a href="/login.html"><button type="button" class="btn-login">Đăng nhập</button></a>
+                                
+                            </div>
+                            <div class="language-dropdown" style="padding-right:100px; ">
+                                <div class="dropdown">
+                                    <span onclick="myFunction2()"  class=" dropbtn2 icon icon-lag-vn" style="cursor: pointer;"></span>
+                                    <div id="myDropdown2" class="dropdown-content">
+                                        <div class="dropdown-language-item"><span class="icon icon-lag-en"></span><span class="language-item">Tiếng Anh</span></div>
+                                        <div class="dropdown-language-item"><span class="icon icon-lag-vn"></span><span class="language-item">Tiếng Việt</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+           <div class="login-container">
+            <div class="login-content">
+                <div class="login-title" style="margin-bottom: 15px;"><b>Đăng ký</b></div>
+                <p style="text-align: center;">Hãy điền vào form để hoàn tất việc đăng ký</p>
+                <div class="login-form">
+                    <div class="login-form-top">
+                        <div class="input-login" style="border-bottom: 1px solid black;">
+                            <input id="user-name-input" type="text" placeholder="Tên đăng nhập" value="">
+                        </div>
+                        <div class="input-login" style="border-bottom: 1px solid black;">
+                            <input id="pass-word-input" type="password" placeholder="Mật khẩu" value="">
+                        </div>
+                        <div class="input-login" style="border-bottom: 1px solid black;">
+                            <input id="re-pass-word-input" type="password" placeholder="Nhập lại mật khẩu" value="">
+                        </div>
+                        <div class="input-login" style="border-bottom: 1px solid black;">
+                            <input id="full-name-input" type="text" placeholder="Tên đầy đủ" value="">
+                        </div>
+                        <div class="input-login" style="border-bottom: 1px solid black;">
+                            <input id="address-input" type="text" placeholder="Địa chỉ" value="">
+                        </div>
+                        <div class="input-login" style="border-bottom: 1px solid black;">
+                            <input id="phone-number-input" type="tel" placeholder="Số điện thoại" value="">
+                        </div>
+                        <div class="input-login" style="border-bottom: 1px solid black;">
+                            <input id="email-input" type="text" placeholder="Email" value="">
+                        </div>
+                    </div>
+                    <div class="login-form-bottom clearfix">
+                        <div class="float-left">
+                            <input type="checkbox" id="RememberMe" checked="">
+                            <label for="RememberMe">
+                                Lưu thông tin đăng ký
+                            </label>
+                        </div>
+                    </div>
+                    <button id="submit-button" class="btn btn-submit" style="width: 100%;">Đăng ký</button>
+                    <br>
+                    <div class="login-form-policy">
+                        Bằng việc đăng kí, bạn đã đồng ý với Shopee về
+                        <br>
+                        <a style="border-bottom: 2px solid;" target="" href="">
+                            Điều khoản dịch vụ
+                        </a>
+                        &
+                        <a style="border-bottom: 2px solid;" target="" href="">
+                            Chính sách bảo mật
+                        </a>
+                    </div>
+                    <div class="" style="text-align: center;">
+                        Đã có tài khoản?
+                        <a href="/login.html">Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
+           </div>
+            
+        </div>
+        <footer style="clear: both;">
+            <div class="container">
+                <div class="">
+                    <div class="footer-left">
+                        <p class="footer-title">Công ty</p>
+                        <br>
+                        <div class="footer-company"><a href="">Giới thiệu</a></div>
+                        <div class="footer-company"><a href="">Trung tâm trợ giúp</a></div>
+                        <div class="footer-company"><a href="">Quy chế</a></div>
+                        <div class="footer-company"><a href="">Điều khoản sử dụng</a></div>
+                        <div class="footer-company"><a href="">Bảo mật thông tin</a></div>
+                        <div class="footer-company"> <a href="">Giải quyết khiếu nại</a></div>
+                        <div class="footer-company"><a href="">Liên hệ</a></div>
+                        <div class="footer-company"><a href="">Hợp tác nhân viên giao nhận</a></div>
+                        <div class="footer-company"><a href="">Đăng ký quán</a></div>
+                        <div class="footer-company"><a href="">ShopeeFoodUni</a></div>
+                        <div class="footer-company"><a href="">Shopee Blog</a></div>       
+                    </div>
+                </div>
+                <div class="footer-left">
+                    <p class="footer-title">Ứng dụng ShopeeFood</p>
+                    <br>
+                    <a href="" class="footer-apps"><span class="footer-app-store"></span></a>
+                    <a href="" class="footer-apps"><span class="footer-google-play"></span></a>
+                    <a href="" class="footer-apps"><span class="footer-huawei"></span></a>
+                </div>
+                <div class="footer-left" style="text-align: center;">
+                    <div class="">
+                        <a href="">
+                            <img src="https://shopeefood.vn/app/assets/img/Logo-ShopeefoodVN.png?a233b36c37415f85f46c25a6cd0963aa" alt="">
+                        </a>
+                    </div>
+                    <p>© 2022  ShopeeFood</p>
+                    <ul class="social-icon">
+                        <li>
+                            <a href="">
+                                <span class="icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-last">
+                    <p class="footer-title">Địa chỉ công ty</p>
+                    <span>
+                        <p>Công Ty Cổ Phần Foody</p>
+                        <p>Lầu G, Tòa nhà Jabes 1,</p>
+                        <p>số 244 đường Cống Quỳnh, phường Phạm Ngũ Lão, Quận 1, TPHCM</p>
+                        <p>Giấy CN ĐKDN số: 0311828036</p>
+                        <p>do Sở Kế hoạch và Đầu tư TP.HCM cấp ngày 11/6/2012,</p>
+                        <p>sửa đổi lần thứ 23, ngày 10/12/2020</p>
+                        <p>Số điện thoại: 1900 2042</p>
+                        <p>Email: <a href="">info@shopeefood.vn</a></p>
+                    </span>
+                    <span class="last-icon">
+                        <a href="">
+                            <img style="width: 100%;" src="/asset/gov_seals1.jpg" alt="">
+                        </a>
+                    </span>
+                </div>
+            </div>
+            </div>
+        </footer>
+        <script src="./js/register.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction2() {
+          document.getElementById("myDropdown2").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn2')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content2");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
+</body>
+</html>

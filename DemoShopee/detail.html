@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/demo.css">
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <div style="padding-top: 70px;">
+
+            <header>
+                <div class="container-header">
+                    <div class="container">
+                        <div class="header-content navbar row  justify-content-between align-items-center" style="display: flex;">
+                            <div class="logo">
+                                <span><a href="/homepage.html"><img src="https://shopeefood.vn/app/assets/img/shopeefoodvn.png?4aa1a38e8da801f4029b80734905f3f7" alt="ShopeeFood"></a></span>
+                            </div>
+                            <div class="select-city">
+                                <div class="dropdown">
+                                    <button id="dropdown-button-id" onclick="myFunction();changecityFunction()" class="dropbtn dropdown-city" style="color: red;">TP.HCM</button>
+                                    <div id="myDropdown" class="dropdown-content">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="category-nav" class="main-nav">
+                            </div>
+                            <div class="search-modal" style="padding-left: 300px;">
+                                <button id="myBtn" class="button-modal-search"></button>
+                                    <div id="myModal" class="modal">
+                                        <div class="modal-content" style="background-color: transparent;">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-search">
+                                                <span class="modal-text">Đặt Đồ ăn, giao hàng từ 20'... có 70285 địa điểm ở TP. HCM từ 00:00 - 23:59</span>
+                                                <form><input class="search-input" name="search-input" type="text" autocomplete="off" value=""></form>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="user-login" style="padding-left: 50px;">
+                                <a href="/login.html"><button type="button" class="btn-login">Đăng nhập</button></a>
+                                
+                            </div>
+                            <div class="language-dropdown" style="padding-right:100px; ">
+                                <div class="dropdown">
+                                    <span onclick="myFunction2()"  class=" dropbtn2 icon icon-lag-vn" style="cursor: pointer;"></span>
+                                    <div id="myDropdown2" class="dropdown-content">
+                                        <div class="dropdown-language-item"><span class="icon icon-lag-en"></span><span class="language-item">Tiếng Anh</span></div>
+                                        <div class="dropdown-language-item"><span class="icon icon-lag-vn"></span><span class="language-item">Tiếng Việt</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="detail-top clearfix">
+                <div class="container">
+                    <div class="detail-top-img">
+                        
+                    </div>
+                    <div class="detail-top-info">
+                        <nav>
+                            <p><a href="/homepage.html">Home</a>>><a class="restaurantCityDetail" href=""></a>>><a class="restaurantRestypeDetail" href=""></a>>><a class="restaurantNameDetail" href=""></a></p>
+                        </nav>
+                        <div><span>SHOP ONLINE</span></div>
+                        <h1 class="restaurantNameh1"></h1>
+                        <div class="restaurantAddressdiv">606/52 Đường 3 Tháng 2, P. 14, Quận 10, TP. HCM</div>
+                        <div class="">
+                            <div class="opentime-status">
+                                <span><a class="restaurant-status" href=""></a></span>
+                            </div>
+                            <div class="time-status">
+                                <i>06:00 - 22:00
+                                </i>
+                            </div>
+                        </div>
+                        <div class="cost-info">
+                            <p>44,000 - 85,000
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="bottom-info">
+                            <div class="bottom-info-left">
+                                <div class="bottom-info-left-top">PHÍ DỊCH VỤ</div>
+                                <div class="bottom-info-left-bottom txt-red"> 0.0% Phí phục vụ </div>
+                            </div>
+                            <div class="bottom-info-left">
+                                <div class="bottom-info-left-top">DỊCH VỤ BỞI</div>
+                                <div class="bottom-info-left-bottom txt-red">ShopeeFood</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="container relative clearfix">
+                <div class="detail-mid-info container relative">
+                    <div class="menu-restaurant">
+                        <div class="">
+                            <div class="" style="color: red;padding: 15px 30px;"><b>Thực đơn</b></div>
+                        </div>
+                        <div class="menu-restaurant-content relative">  
+                            <div class="">
+                                <div class="menu-restaurant-category">
+                                </div>
+                                <div class="menu-restaurant-detail">
+                                    <div class="menu-restaurant-list">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-restaurant-right">
+                        <div class="right-header clearfix">
+                            <div class="group-order float-left">
+                                <span>1</span> phần - <span>1</span> người
+                            </div>
+                            <div class="group-order float-right">
+                                <button class="group-purchase">Nhóm cùng đặt</button>
+                                <button class="reset-purchase">Reset</button>
+                            </div>
+                        </div>
+                        <div id="menu-right" class="right-order">
+                        </div>
+                        <hr>
+                        <div class="clearfix" style="font-size: 14px;margin: 8px 5px;">
+                            <div id="price-of-all" class=" float-right"></div>
+                        </div>
+                        <hr>
+                        <div class="clearfix" style="font-size: 14px;margin: 8px 5px;">
+                            <div class=" float-left">Phí vận chuyển (Est.)</div>
+                            <div class=" float-right">10,000đ/km</div>
+                        </div>
+                        <hr>
+                        <div class="clearfix" style="font-size: 14px;margin: 8px 5px;">
+                            <div class=" float-left">Tạm tính</div>
+                            <div class=" float-right" style="color: rgb(0, 83, 128);font-weight: bold;">39,000đ</div>
+                        </div>
+                        <hr>
+                        <div class="btnconfirm">
+                            <button id="confirm-purchase-button" class="confirm-purchase">
+                                <i class="myBtn3"></i>
+                                Đặt trước            
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="myModal2" class="modal" style="display: none;">
+                    <div class="modal-content2">
+                        <span id="product-close" class="close" data-dismiss="modal">x</span>
+                        <div class="modal-header clearfix">
+                            <div class="image-item float-left">
+                            </div>
+                            <div class="info-item float-left">
+                                <div class="info-item-name">
+                                    
+                                </div>
+                                <div class="info-item-description">
+                                    
+                                </div>
+                                <div class="info-item-price">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div><hr></div>
+                        <div id="modal-body-product" class="modal-body">
+                        </div>
+                        <div id="modal-footer-product" class="modal-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="myModal3" class="modal" style="display: none;">
+                    <div class="modal-content3">
+                        <span id="confirm-close" class="close" data-dismiss="modal">x</span>
+                        <div class="clearfix" style="margin: 10px;">
+                            <div class="float-left"><h3>Xác nhận đơn hàng</h3></div>
+                        </div>
+                        <div class="modal-detail clearfix">
+                            <div class="col1 float-left clearfix" style="width: 40%;border-right: 10px solid rgba(219, 219, 219);">
+                                <div class="map">
+                                    <iframe src="" width="485px" height="400px" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                                <div class="info-modal3">
+                                    <h2>Standard Service</h2>
+                                </div>
+                                <div class="address-modal3" style="margin-left: 5px;">
+                                    <div class="sender">
+                                        <div class="sender-info">
+                                            <h4 id="sender-info-name" style="display: inline-block;">Trà Sữa Gong Cha - Nguyễn Văn Trỗi</h4>
+                                        </div>
+                                        <div class="sender-description">
+                                            <p id="sender-info-description" style="font-size: 12px;display: inline-block;">
+                                                123, Nguyễn Văn Trỗi, Phường 1, Quận Tân Bình, Thành phố
+                                                Hồ Chí Minh
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="receiver">
+                                        <div class="receiver-info">
+                                            <h4 id="receiver-info-name" style="display: inline-block;">Võ Minh Trung</h4>
+                                        </div>
+                                        <div class="receiver-description">
+                                            <p id="receiver-info-desc" style="font-size: 12px;">
+                                                Mỹ Tho, Tiền Giang
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-modal3" style="margin-left: 20px;">
+                                    <h3>
+                                        Sớm nhất (ASAP) - 20/09 -
+                                        <span style="color: red">7.6 km</span> - Dự kiến:
+                                        <span>40'</span>
+                                    </h3>
+                                </div>
+                                <div class="change-modal3 clearfix" style="margin: 15px;">
+                                    <a href="">Thay đổi thông tin giao hàng</a>
+                                </div>
+                            </div>
+                            <div class="col2 float-right clearfix" style="width: 60%;">
+                                <div class="clearfix">
+                                    <div class="text float-left" style="margin-left: 10px;">
+                                        <h2>Chi tiết đơn hàng</h2>
+                                      </div>
+                                </div>
+                                <div class="list-item-modal3">
+                                    <div id="item-list-purchased" class="item-modal3 clearfix">
+                                        <!-- <div class="float-left" style="margin: 5px 5px 0 10px;">
+                                            <div class="item-quantity" style="display: inline-block;">
+                                                <span><b>1</b></span>
+                                            </div>
+                                            <div class="item-name" style="display: inline-block;">
+                                                <h4>Trà Xanh Gong Cha :</h4>
+                                            </div>
+                                            <div class="item-optional" style="display: inline-block;">
+                                                <span>[Size L, 30% đường, 70% đá]</span>
+                                            </div>
+                                        </div> -->
+
+                                        
+                                        
+                                        
+                                    </div>
+                                    <hr>
+                                    <div class="total clearfix">
+                                        <p class="text float-left">Tổng món</p>
+                                        <p class="total-price float-right"></p>
+                                    </div>
+                                    <div class="delivery clearfix">
+                                        <p class="text float-left">
+                                            Phí vận chuyển: <b style="color: red;">7.6 km</b>
+                                            <i class="fa-solid fa-circle-question"></i>
+                                        </p>
+                                        <p class="total-fee float-right">38,000 đ</p>
+                                    </div>
+                                    <div class="voucher">
+                                        <p class="text">Mã khuyến mãi</p>
+                                        <input type="text" placeholder="NHẬP MÃ">
+                                        <button class="voucher-button">Áp dụng</button>
+                                    </div>
+                                    <div class="temporary clearfix">
+                                        <p class="float-left">Tạm tính</p>
+                                        <p class="temp-fee float-right"></p>
+                                    </div>
+                                    <div class="pay-method clearfix">
+                                        <p class="float-left">Ví AirPay</p>
+                                        <div><a href="" class="float-right" style="margin-top: 15px;">Thay đổi</a></div>
+                                    </div>
+                                    <div class="note">
+                                        <p class="float-left">Ghi chú:</p>
+                                        <input style="margin-top: 10px;" type="text" placeholder="Ví dụ: Tòa nhà ABC, lầu 8, cho thêm 2 ly nhựa,...">
+                                    </div>
+                                    <div class="vat">
+                                        <img src="/asset/vat.png" alt="">
+                                        <a href="" style="display: inline-block;">Không xuất hóa đơn VAT</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-modal3">
+                            <button id="confirm-button" class="btn">
+                                <p class="text">Hoàn tất đơn hàng</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer style="clear: both;">
+            <div class="container">
+                <div class="">
+                    <div class="footer-left">
+                        <p class="footer-title">Công ty</p>
+                        <br>
+                        <div class="footer-company"><a href="">Giới thiệu</a></div>
+                        <div class="footer-company"><a href="">Trung tâm trợ giúp</a></div>
+                        <div class="footer-company"><a href="">Quy chế</a></div>
+                        <div class="footer-company"><a href="">Điều khoản sử dụng</a></div>
+                        <div class="footer-company"><a href="">Bảo mật thông tin</a></div>
+                        <div class="footer-company"> <a href="">Giải quyết khiếu nại</a></div>
+                        <div class="footer-company"><a href="">Liên hệ</a></div>
+                        <div class="footer-company"><a href="">Hợp tác nhân viên giao nhận</a></div>
+                        <div class="footer-company"><a href="">Đăng ký quán</a></div>
+                        <div class="footer-company"><a href="">ShopeeFoodUni</a></div>
+                        <div class="footer-company"><a href="">Shopee Blog</a></div>       
+                    </div>
+                </div>
+                <div class="footer-left">
+                    <p class="footer-title">Ứng dụng ShopeeFood</p>
+                    <br>
+                    <a href="" class="footer-apps"><span class="footer-app-store"></span></a>
+                    <a href="" class="footer-apps"><span class="footer-google-play"></span></a>
+                    <a href="" class="footer-apps"><span class="footer-huawei"></span></a>
+                </div>
+                <div class="footer-left" style="text-align: center;">
+                    <div class="">
+                        <a href="">
+                            <img src="https://shopeefood.vn/app/assets/img/Logo-ShopeefoodVN.png?a233b36c37415f85f46c25a6cd0963aa" alt="">
+                        </a>
+                    </div>
+                    <p>© 2022  ShopeeFood</p>
+                    <ul class="social-icon">
+                        <li>
+                            <a href="">
+                                <span class="icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-last">
+                    <p class="footer-title">Địa chỉ công ty</p>
+                    <span>
+                        <p>Công Ty Cổ Phần Foody</p>
+                        <p>Lầu G, Tòa nhà Jabes 1,</p>
+                        <p>số 244 đường Cống Quỳnh, phường Phạm Ngũ Lão, Quận 1, TPHCM</p>
+                        <p>Giấy CN ĐKDN số: 0311828036</p>
+                        <p>do Sở Kế hoạch và Đầu tư TP.HCM cấp ngày 11/6/2012,</p>
+                        <p>sửa đổi lần thứ 23, ngày 10/12/2020</p>
+                        <p>Số điện thoại: 1900 2042</p>
+                        <p>Email: <a href="">info@shopeefood.vn</a></p>
+                    </span>
+                    <span class="last-icon">
+                        <a href="">
+                            <img style="width: 100%;" src="/asset/gov_seals1.jpg" alt="">
+                        </a>
+                    </span>
+                </div>
+            </div>
+            </div>
+        </footer>
+        <script src="/js/detail.js"></script>
+    <script>
+        var modal = document.querySelector("#myModal2");
+
+        var modal2 = document.querySelector("#myModal3");
+
+        var span = document.querySelector("#product-close");
+
+        var span2 =document.querySelector("#confirm-close");
+ 
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+
+        span2.onclick = function() {
+          modal2.style.display = "none";
+        }
+
+        window.addEventListener("click", function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+                window.location.reload();
+            }
+        });
+        
+
+    </script>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction2() {
+          document.getElementById("myDropdown2").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn2')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content2");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
+    <script>
+        function changecityFunction() {
+            var btn1 = document.getElementsByClassName("dropbtn dropdown-city")[0];
+            var btns = document.getElementsByClassName("city-dropdown");
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click",()=>{
+                    btn1.innerHTML=btns[i].innerHTML
+                    btn1.id=btns[i].id
+                })
+            }
+        }
+    </script>
+</body>
+</html>
