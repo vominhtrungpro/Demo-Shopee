@@ -1,0 +1,173 @@
+/* -------------------------------- 
+
+File#: _1_flash-message
+Title: Flash message
+Descr: Modeless, non-interactive message to alert the user of a status change
+Usage: codyhouse.co/license
+
+-------------------------------- */
+/* reset */
+
+  
+  /* buttons */
+  .fb5-btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    white-space: nowrap;
+    text-decoration: none;
+    background: hsl(var(--fb5-color-bg-dark-hsl));
+    color: hsl(var(--fb5-color-contrast-higher-hsl));
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all 0.2s ease;
+    will-change: transform;
+    padding: var(--fb5-space-2xs) var(--fb5-space-sm);
+    border-radius: 0.25em;
+  }
+  
+  .fb5-btn:focus-visible {
+    box-shadow: 0px 0px 0px 2px hsl(var(--fb5-color-bg-hsl)), 0px 0px 0px 4px hsla(var(--fb5-color-contrast-higher-hsl), 0.15);
+    outline: none;
+  }
+  
+  .fb5-btn:active {
+    transform: translateY(2px);
+  }
+  
+  .fb5-btn--primary {
+    background: hsl(var(--fb5-color-primary-hsl));
+    color: hsl(var(--fb5-color-white-hsl));
+    box-shadow: inset 0px 1px 0px hsla(var(--fb5-color-white-hsl), 0.15), 0px 1px 3px hsla(var(--fb5-color-primary-darker-hsl), 0.25), 0px 2px 6px hsla(var(--fb5-color-primary-darker-hsl), 0.1), 0px 6px 10px -2px hsla(var(--fb5-color-primary-darker-hsl), 0.25);
+  }
+  
+  .fb5-btn--primary:hover {
+    background: hsl(var(--fb5-color-primary-light-hsl));
+    box-shadow: inset 0px 1px 0px hsla(var(--fb5-color-white-hsl), 0.15), 0px 1px 2px hsla(var(--fb5-color-primary-darker-hsl), 0.25), 0px 1px 4px hsla(var(--fb5-color-primary-darker-hsl), 0.1), 0px 3px 6px -2px hsla(var(--fb5-color-primary-darker-hsl), 0.25);
+  }
+  
+  .fb5-btn--primary:focus {
+    box-shadow: inset 0px 1px 0px hsla(var(--fb5-color-white-hsl), 0.15), 0px 1px 2px hsla(var(--fb5-color-primary-darker-hsl), 0.25), 0px 1px 4px hsla(var(--fb5-color-primary-darker-hsl), 0.1), 0px 3px 6px -2px hsla(var(--fb5-color-primary-darker-hsl), 0.25), 0px 0px 0px 2px hsl(var(--fb5-color-bg-hsl)), 0px 0px 0px 4px hsl(var(--fb5-color-primary-hsl));
+  }
+  
+  /* icons */
+  .fb5-icon {
+    height: var(--fb5-size, 1em);
+    width: var(--fb5-size, 1em);
+    display: inline-block;
+    color: inherit;
+    fill: currentColor;
+    line-height: 1;
+    flex-shrink: 0;
+    max-width: initial;
+  }
+  
+  /* component */
+  .flash-message {
+    position: fixed;
+    align-items: center;
+    bottom: var(--fb5-space-md);
+    left: var(--fb5-space-md);
+    z-index: 10;
+    padding: var(--fb5-space-xs);
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075), 0 0.3px 0.4px rgba(0, 0, 0, 0.025),0 0.9px 1.5px rgba(0, 0, 0, 0.05), 0 3.5px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.25em;
+    color: hsl(var(--fb5-color-contrast-high-hsl));
+    font-size: var(--fb5-text-sm);
+    transition: 0.2s;
+    -webkit-transform: translateY(16px);
+            transform: translateY(16px);
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #2eb85c;
+    color: white;
+    align-items: right;
+    margin-left: auto;
+    margin-right: 30px;
+    right: 0;
+    text-align: center;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 30px;
+    float: right;
+  }
+
+  .flash-message-detail {
+    position: fixed;
+    align-items: center;
+    bottom: var(--fb5-space-md);
+    left: var(--fb5-space-md);
+    z-index: 10;
+    padding: var(--fb5-space-xs);
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075), 0 0.3px 0.4px rgba(0, 0, 0, 0.025),0 0.9px 1.5px rgba(0, 0, 0, 0.05), 0 3.5px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.25em;
+    color: hsl(var(--fb5-color-contrast-high-hsl));
+    font-size: var(--fb5-text-sm);
+    transition: 0.2s;
+    -webkit-transform: translateY(16px);
+            transform: translateY(16px);
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #2eb85c;
+    color: white;
+    align-items: right;
+    margin-left: auto;
+    margin-right: 30px;
+    right: 0;
+    text-align: center;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 30px;
+    float: right;
+  }
+
+  .flash-message-register {
+    position: absolute;
+    align-items: center;
+    bottom: var(--fb5-space-md);
+    left: var(--fb5-space-md);
+    z-index: 10;
+    padding: var(--fb5-space-xs);
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075), 0 0.3px 0.4px rgba(0, 0, 0, 0.025),0 0.9px 1.5px rgba(0, 0, 0, 0.05), 0 3.5px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.25em;
+    color: hsl(var(--fb5-color-contrast-high-hsl));
+    font-size: var(--fb5-text-sm);
+    transition: 0.2s;
+    -webkit-transform: translateY(16px);
+            transform: translateY(16px);
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  
+  .flash-message--is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  
+  /* utility classes */
+  .fb5-margin-right-3xs {
+    margin-right: var(--fb5-space-3xs);
+  }
+  
+  .fb5-items-center {
+    align-items: center;
+  }
+  
+  .fb5-inline-flex {
+    display: inline-flex;
+  }
